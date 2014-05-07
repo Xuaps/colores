@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8B5EA66A-0356-4EF0-A5D5-BAB7C1BB0827</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Colors</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8C373255-91F4-4143-8B57-C3E926F1C8AA</key>
+		<string>ssh://bitbucket.org/dvilchezm/colores.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ejecta/Colors.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8C373255-91F4-4143-8B57-C3E926F1C8AA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://bitbucket.org/dvilchezm/colores.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8C373255-91F4-4143-8B57-C3E926F1C8AA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8C373255-91F4-4143-8B57-C3E926F1C8AA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>colores</string>
+		</dict>
+	</array>
+</dict>
+</plist>
