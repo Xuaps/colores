@@ -60,11 +60,6 @@
 		B64CE67E166682700087CF94 /* EJBindingTouchInput.m in Sources */ = {isa = PBXBuildFile; fileRef = B64CE64E166682700087CF94 /* EJBindingTouchInput.m */; };
 		B64CE67F166682700087CF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B64CE651166682700087CF94 /* AppDelegate.m */; };
 		B64CE682166682700087CF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B64CE661166682700087CF94 /* main.m */; };
-		B64CE68F166682B10087CF94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE684166682B10087CF94 /* Default-568h@2x.png */; };
-		B64CE690166682B10087CF94 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE685166682B10087CF94 /* Default-Landscape.png */; };
-		B64CE691166682B10087CF94 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE686166682B10087CF94 /* Default-Portrait.png */; };
-		B64CE692166682B10087CF94 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE687166682B10087CF94 /* Default.png */; };
-		B64CE693166682B10087CF94 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE688166682B10087CF94 /* Default@2x.png */; };
 		B64CE695166682B10087CF94 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE68A166682B10087CF94 /* Icon-72.png */; };
 		B64CE696166682B10087CF94 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE68B166682B10087CF94 /* Icon-72@2x.png */; };
 		B64CE697166682B10087CF94 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B64CE68C166682B10087CF94 /* Icon.png */; };
@@ -118,6 +113,13 @@
 		B99F05C2188C4125002F194D /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B99F05BE188C4125002F194D /* Icon-60@2x.png */; };
 		B99F05C3188C4125002F194D /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = B99F05BF188C4125002F194D /* Icon-76.png */; };
 		B99F05C4188C4125002F194D /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B99F05C0188C4125002F194D /* Icon-76@2x.png */; };
+		E31E34D5192A2F7800455D3F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34C9192A2F7800455D3F /* Default@2x.png */; };
+		E31E34DA192A2F7800455D3F /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34CE192A2F7800455D3F /* icon-40.png */; };
+		E31E34DB192A2F7800455D3F /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34CF192A2F7800455D3F /* icon-40@2x.png */; };
+		E31E34DC192A2F7800455D3F /* icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D0192A2F7800455D3F /* icon-50.png */; };
+		E31E34DD192A2F7800455D3F /* icon-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D1192A2F7800455D3F /* icon-50@2x.png */; };
+		E31E34DE192A2F7800455D3F /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D2192A2F7800455D3F /* icon-small.png */; };
+		E31E34DF192A2F7800455D3F /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D3192A2F7800455D3F /* icon-small@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -210,11 +212,6 @@
 		B64CE650166682700087CF94 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B64CE651166682700087CF94 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B64CE661166682700087CF94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B64CE684166682B10087CF94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B64CE685166682B10087CF94 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
-		B64CE686166682B10087CF94 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
-		B64CE687166682B10087CF94 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		B64CE688166682B10087CF94 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B64CE689166682B10087CF94 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B64CE68A166682B10087CF94 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		B64CE68B166682B10087CF94 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
@@ -307,6 +304,14 @@
 		B99F05BE188C4125002F194D /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		B99F05BF188C4125002F194D /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
 		B99F05C0188C4125002F194D /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		E31E34C7192A2F2700455D3F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E31E34C9192A2F7800455D3F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E31E34CE192A2F7800455D3F /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = "<group>"; };
+		E31E34CF192A2F7800455D3F /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
+		E31E34D0192A2F7800455D3F /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50.png"; sourceTree = "<group>"; };
+		E31E34D1192A2F7800455D3F /* icon-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50@2x.png"; sourceTree = "<group>"; };
+		E31E34D2192A2F7800455D3F /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
+		E31E34D3192A2F7800455D3F /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -551,15 +556,18 @@
 		B64CE683166682B10087CF94 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E31E34C7192A2F2700455D3F /* Default.png */,
+				E31E34C9192A2F7800455D3F /* Default@2x.png */,
+				E31E34CE192A2F7800455D3F /* icon-40.png */,
+				E31E34CF192A2F7800455D3F /* icon-40@2x.png */,
+				E31E34D0192A2F7800455D3F /* icon-50.png */,
+				E31E34D1192A2F7800455D3F /* icon-50@2x.png */,
+				E31E34D2192A2F7800455D3F /* icon-small.png */,
+				E31E34D3192A2F7800455D3F /* icon-small@2x.png */,
 				B99F05BD188C4125002F194D /* Icon-60.png */,
 				B99F05BE188C4125002F194D /* Icon-60@2x.png */,
 				B99F05BF188C4125002F194D /* Icon-76.png */,
 				B99F05C0188C4125002F194D /* Icon-76@2x.png */,
-				B64CE684166682B10087CF94 /* Default-568h@2x.png */,
-				B64CE685166682B10087CF94 /* Default-Landscape.png */,
-				B64CE686166682B10087CF94 /* Default-Portrait.png */,
-				B64CE687166682B10087CF94 /* Default.png */,
-				B64CE688166682B10087CF94 /* Default@2x.png */,
 				B64CE68A166682B10087CF94 /* Icon-72.png */,
 				B64CE68B166682B10087CF94 /* Icon-72@2x.png */,
 				B64CE68C166682B10087CF94 /* Icon.png */,
@@ -708,14 +716,14 @@
 				B64C878B16B800DA0097CD5B /* Flat.fsh in Resources */,
 				B64C878C16B800DA0097CD5B /* Pattern.fsh in Resources */,
 				B64C878D16B800DA0097CD5B /* Texture.fsh in Resources */,
+				E31E34DE192A2F7800455D3F /* icon-small.png in Resources */,
+				E31E34DF192A2F7800455D3F /* icon-small@2x.png in Resources */,
 				B64C878E16B800DA0097CD5B /* Vertex.vsh in Resources */,
 				B609F2D416AD877E00A3B2B9 /* RadialGradient.fsh in Resources */,
+				E31E34DD192A2F7800455D3F /* icon-50@2x.png in Resources */,
 				B68C5B95132E6CD60015092E /* App in Resources */,
-				B64CE68F166682B10087CF94 /* Default-568h@2x.png in Resources */,
-				B64CE690166682B10087CF94 /* Default-Landscape.png in Resources */,
-				B64CE691166682B10087CF94 /* Default-Portrait.png in Resources */,
-				B64CE692166682B10087CF94 /* Default.png in Resources */,
-				B64CE693166682B10087CF94 /* Default@2x.png in Resources */,
+				E31E34D5192A2F7800455D3F /* Default@2x.png in Resources */,
+				E31E34DC192A2F7800455D3F /* icon-50.png in Resources */,
 				B64CE695166682B10087CF94 /* Icon-72.png in Resources */,
 				B64CE696166682B10087CF94 /* Icon-72@2x.png in Resources */,
 				B64CE697166682B10087CF94 /* Icon.png in Resources */,
@@ -726,6 +734,8 @@
 				B99F05C2188C4125002F194D /* Icon-60@2x.png in Resources */,
 				B99F05C3188C4125002F194D /* Icon-76.png in Resources */,
 				B99F05C4188C4125002F194D /* Icon-76@2x.png in Resources */,
+				E31E34DA192A2F7800455D3F /* icon-40.png in Resources */,
+				E31E34DB192A2F7800455D3F /* icon-40@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +823,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -824,7 +835,7 @@
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -833,6 +844,7 @@
 				OTHER_CFLAGS = "-DDEBUG";
 				PRODUCT_NAME = Colors;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s arm64 i386";
 			};
 			name = Debug;
 		};
@@ -840,6 +852,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -848,7 +861,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

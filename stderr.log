@@ -1,0 +1,154 @@
+objc[52003]: Class JSWTFMainThreadCaller is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore and /Users/dvilchez/Library/Application Support/iPhone Simulator/7.1/Applications/A8DE18BB-B3D9-4D69-AE48-FBF3131F546B/Colors.app/Colors. One of the two will be used. Which one is undefined.
+2014-05-19 16:09:42.170 Colors[52003:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 2048x1536, retina: yes = 4096x3072, msaa: no
+2014-05-19 16:09:42.235 Colors[52003:70b] Loading Image: media/garab_black.font.png
+2014-05-19 16:09:42.237 Colors[52003:70b] Loading Image: media/sr_strawberry.png
+2014-05-19 16:09:42.240 Colors[52003:70b] Loading Image: media/fresa01.png
+2014-05-19 16:09:42.242 Colors[52003:70b] Loading Image: media/fresa02.png
+2014-05-19 16:09:42.243 Colors[52003:70b] Loading Image: media/fresa03.png
+2014-05-19 16:09:42.244 Colors[52003:70b] Loading Image: media/blanco.png
+2014-05-19 16:09:42.246 Colors[52003:70b] Loading Image: media/fondo_rojo.png
+2014-05-19 16:09:42.247 Colors[52003:70b] Loading Image: media/textura_rojo.png
+2014-05-19 16:09:42.249 Colors[52003:70b] Loading Image: media/naranja_01.png
+2014-05-19 16:09:42.250 Colors[52003:70b] Loading Image: media/naranja_02.png
+2014-05-19 16:09:42.251 Colors[52003:70b] Loading Image: media/sr_orange.png
+2014-05-19 16:09:42.252 Colors[52003:70b] Loading Image: media/fondo_naranja.png
+2014-05-19 16:09:42.253 Colors[52003:70b] Loading Image: media/textura_naranja.png
+2014-05-19 16:09:42.254 Colors[52003:70b] Loading Image: media/02_rayos.png
+2014-05-19 16:09:42.254 Colors[52003:70b] Loading Image: media/sr_yellow.png
+2014-05-19 16:09:42.255 Colors[52003:70b] Loading Image: media/fondo_amarillo.png
+2014-05-19 16:09:42.256 Colors[52003:70b] Loading Image: media/rayos.png
+2014-05-19 16:09:42.257 Colors[52003:70b] Loading Image: media/03_sol.png
+2014-05-19 16:09:42.258 Colors[52003:70b] Loading Image: media/textura_amarillo.png
+2014-05-19 16:09:42.258 Colors[52003:70b] Loading Image: media/sr_green.png
+2014-05-19 16:09:42.259 Colors[52003:70b] Loading Image: media/arbol01_sprite.png
+2014-05-19 16:09:42.260 Colors[52003:70b] Loading Image: media/fondo_verde.png
+2014-05-19 16:09:42.262 Colors[52003:70b] Loading Image: media/flecha_izquierda.png
+2014-05-19 16:09:42.264 Colors[52003:70b] Loading Image: media/flecha_derecha.png
+2014-05-19 16:09:42.265 Colors[52003:70b] Loading Image: media/garab_white.font.png
+2014-05-19 16:09:42.266 Colors[52003:70b] Loading Image: media/garab_black2.font.png
+2014-05-19 16:09:42.267 Colors[52003:70b] Loading Image: media/garab_white2.font.png
+2014-05-19 16:09:42.811 Colors[52003:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 480x1536, retina: yes = 960x3072, msaa: no
+2014-05-19 16:09:42.859 Colors[52003:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 480x360, retina: yes = 960x720, msaa: no
+2014-05-19 16:09:43.009 Colors[52003:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 7368x112, msaa: no
+2014-05-19 16:09:43.010 Colors[52003:70b] Warning: Image [Dynamic] larger than MAX_TEXTURE_SIZE (4096)
+2014-05-19 16:09:43.012 Colors[52003:70b] Creating Offscreen Canvas (2D): size: 1842x56, retina: yes = 3684x112, msaa: no
+2014-05-19 16:09:43.014 Colors[52003:70b] Creating Offscreen Canvas (2D): size: 1842x28, retina: yes = 3684x56, msaa: no
+2014-05-19 16:09:44.721 Colors[52003:1203] Loading Sound(AVAudio): media/background.mp3
+2014-05-19 16:09:44.723 Colors[52003:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 7368x112, msaa: no
+2014-05-19 16:09:44.723 Colors[52003:70b] Warning: Image [Dynamic] larger than MAX_TEXTURE_SIZE (4096)
+2014-05-19 16:09:44.724 Colors[52003:70b] Creating Offscreen Canvas (2D): size: 1842x56, retina: yes = 3684x112, msaa: no
+2014-05-19 16:09:44.726 Colors[52003:70b] Creating Offscreen Canvas (2D): size: 1842x28, retina: yes = 3684x56, msaa: no
+objc[52051]: Class JSWTFMainThreadCaller is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore and /Users/dvilchez/Library/Application Support/iPhone Simulator/7.1/Applications/A8DE18BB-B3D9-4D69-AE48-FBF3131F546B/Colors.app/Colors. One of the two will be used. Which one is undefined.
+2014-05-19 16:11:00.782 Colors[52051:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 2048x1536, retina: yes = 4096x3072, msaa: no
+2014-05-19 16:11:00.812 Colors[52051:70b] Loading Image: media/garab_black.font.png
+2014-05-19 16:11:00.814 Colors[52051:70b] Loading Image: media/sr_strawberry.png
+2014-05-19 16:11:00.814 Colors[52051:70b] Loading Image: media/fresa01.png
+2014-05-19 16:11:00.815 Colors[52051:70b] Loading Image: media/fresa02.png
+2014-05-19 16:11:00.816 Colors[52051:70b] Loading Image: media/fresa03.png
+2014-05-19 16:11:00.816 Colors[52051:70b] Loading Image: media/blanco.png
+2014-05-19 16:11:00.817 Colors[52051:70b] Loading Image: media/fondo_rojo.png
+2014-05-19 16:11:00.817 Colors[52051:70b] Loading Image: media/textura_rojo.png
+2014-05-19 16:11:00.819 Colors[52051:70b] Loading Image: media/naranja_01.png
+2014-05-19 16:11:00.819 Colors[52051:70b] Loading Image: media/naranja_02.png
+2014-05-19 16:11:00.820 Colors[52051:70b] Loading Image: media/sr_orange.png
+2014-05-19 16:11:00.821 Colors[52051:70b] Loading Image: media/fondo_naranja.png
+2014-05-19 16:11:00.822 Colors[52051:70b] Loading Image: media/textura_naranja.png
+2014-05-19 16:11:00.823 Colors[52051:70b] Loading Image: media/02_rayos.png
+2014-05-19 16:11:00.823 Colors[52051:70b] Loading Image: media/sr_yellow.png
+2014-05-19 16:11:00.824 Colors[52051:70b] Loading Image: media/fondo_amarillo.png
+2014-05-19 16:11:00.825 Colors[52051:70b] Loading Image: media/rayos.png
+2014-05-19 16:11:00.826 Colors[52051:70b] Loading Image: media/03_sol.png
+2014-05-19 16:11:00.826 Colors[52051:70b] Loading Image: media/textura_amarillo.png
+2014-05-19 16:11:00.827 Colors[52051:70b] Loading Image: media/sr_green.png
+2014-05-19 16:11:00.828 Colors[52051:70b] Loading Image: media/arbol01_sprite.png
+2014-05-19 16:11:00.828 Colors[52051:70b] Loading Image: media/fondo_verde.png
+2014-05-19 16:11:00.829 Colors[52051:70b] Loading Image: media/flecha_izquierda.png
+2014-05-19 16:11:00.829 Colors[52051:70b] Loading Image: media/flecha_derecha.png
+2014-05-19 16:11:00.830 Colors[52051:70b] Loading Image: media/garab_white.font.png
+2014-05-19 16:11:00.831 Colors[52051:70b] Loading Image: media/garab_black2.font.png
+2014-05-19 16:11:00.832 Colors[52051:70b] Loading Image: media/garab_white2.font.png
+2014-05-19 16:11:01.134 Colors[52051:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 480x1536, retina: yes = 960x3072, msaa: no
+2014-05-19 16:11:01.146 Colors[52051:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 480x360, retina: yes = 960x720, msaa: no
+2014-05-19 16:11:01.206 Colors[52051:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 7368x112, msaa: no
+2014-05-19 16:11:01.207 Colors[52051:70b] Warning: Image [Dynamic] larger than MAX_TEXTURE_SIZE (4096)
+2014-05-19 16:11:01.208 Colors[52051:70b] Creating Offscreen Canvas (2D): size: 1842x56, retina: yes = 3684x112, msaa: no
+2014-05-19 16:11:01.210 Colors[52051:70b] Creating Offscreen Canvas (2D): size: 1842x28, retina: yes = 3684x56, msaa: no
+2014-05-19 16:11:02.664 Colors[52051:1203] Loading Sound(AVAudio): media/background.mp3
+2014-05-19 16:11:02.668 Colors[52051:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 7368x112, msaa: no
+2014-05-19 16:11:02.669 Colors[52051:70b] Warning: Image [Dynamic] larger than MAX_TEXTURE_SIZE (4096)
+2014-05-19 16:11:02.670 Colors[52051:70b] Creating Offscreen Canvas (2D): size: 1842x56, retina: yes = 3684x112, msaa: no
+2014-05-19 16:11:02.672 Colors[52051:70b] Creating Offscreen Canvas (2D): size: 1842x28, retina: yes = 3684x56, msaa: no
+objc[52106]: Class JSWTFMainThreadCaller is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore and /Users/dvilchez/Library/Application Support/iPhone Simulator/7.1/Applications/A8DE18BB-B3D9-4D69-AE48-FBF3131F546B/Colors.app/Colors. One of the two will be used. Which one is undefined.
+2014-05-19 16:11:21.825 Colors[52106:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 2048x1536, retina: yes = 4096x3072, msaa: no
+2014-05-19 16:11:21.874 Colors[52106:70b] Loading Image: media/garab_black.font.png
+2014-05-19 16:11:21.885 Colors[52106:70b] Loading Image: media/sr_strawberry.png
+2014-05-19 16:11:21.926 Colors[52106:70b] Loading Image: media/fresa01.png
+2014-05-19 16:11:21.955 Colors[52106:70b] Loading Image: media/fresa02.png
+2014-05-19 16:11:21.958 Colors[52106:70b] Loading Image: media/fresa03.png
+2014-05-19 16:11:21.968 Colors[52106:70b] Loading Image: media/blanco.png
+2014-05-19 16:11:21.969 Colors[52106:70b] Loading Image: media/fondo_rojo.png
+2014-05-19 16:11:21.970 Colors[52106:70b] Loading Image: media/textura_rojo.png
+2014-05-19 16:11:21.971 Colors[52106:70b] Loading Image: media/naranja_01.png
+2014-05-19 16:11:21.973 Colors[52106:70b] Loading Image: media/naranja_02.png
+2014-05-19 16:11:21.974 Colors[52106:70b] Loading Image: media/sr_orange.png
+2014-05-19 16:11:21.976 Colors[52106:70b] Loading Image: media/fondo_naranja.png
+2014-05-19 16:11:21.977 Colors[52106:70b] Loading Image: media/textura_naranja.png
+2014-05-19 16:11:21.978 Colors[52106:70b] Loading Image: media/02_rayos.png
+2014-05-19 16:11:21.979 Colors[52106:70b] Loading Image: media/sr_yellow.png
+2014-05-19 16:11:21.980 Colors[52106:70b] Loading Image: media/fondo_amarillo.png
+2014-05-19 16:11:21.980 Colors[52106:70b] Loading Image: media/rayos.png
+2014-05-19 16:11:21.982 Colors[52106:70b] Loading Image: media/03_sol.png
+2014-05-19 16:11:21.982 Colors[52106:70b] Loading Image: media/textura_amarillo.png
+2014-05-19 16:11:21.983 Colors[52106:70b] Loading Image: media/sr_green.png
+2014-05-19 16:11:21.984 Colors[52106:70b] Loading Image: media/arbol01_sprite.png
+2014-05-19 16:11:21.985 Colors[52106:70b] Loading Image: media/fondo_verde.png
+2014-05-19 16:11:21.986 Colors[52106:70b] Loading Image: media/flecha_izquierda.png
+2014-05-19 16:11:21.987 Colors[52106:70b] Loading Image: media/flecha_derecha.png
+2014-05-19 16:11:21.987 Colors[52106:70b] Loading Image: media/garab_white.font.png
+2014-05-19 16:11:21.989 Colors[52106:70b] Loading Image: media/garab_black2.font.png
+2014-05-19 16:11:21.989 Colors[52106:70b] Loading Image: media/garab_white2.font.png
+2014-05-19 16:11:22.512 Colors[52106:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 480x1536, retina: yes = 960x3072, msaa: no
+2014-05-19 16:11:22.537 Colors[52106:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 480x360, retina: yes = 960x720, msaa: no
+2014-05-19 16:11:22.678 Colors[52106:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 7368x112, msaa: no
+2014-05-19 16:11:22.693 Colors[52106:70b] Warning: Image [Dynamic] larger than MAX_TEXTURE_SIZE (4096)
+2014-05-19 16:11:22.706 Colors[52106:70b] Creating Offscreen Canvas (2D): size: 1842x56, retina: yes = 3684x112, msaa: no
+2014-05-19 16:11:22.717 Colors[52106:70b] Creating Offscreen Canvas (2D): size: 1842x28, retina: yes = 3684x56, msaa: no
+2014-05-19 16:11:24.248 Colors[52106:1303] Loading Sound(AVAudio): media/background.mp3
+2014-05-19 16:11:24.256 Colors[52106:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 7368x112, msaa: no
+2014-05-19 16:11:24.257 Colors[52106:70b] Warning: Image [Dynamic] larger than MAX_TEXTURE_SIZE (4096)
+2014-05-19 16:11:24.257 Colors[52106:70b] Creating Offscreen Canvas (2D): size: 1842x56, retina: yes = 3684x112, msaa: no
+2014-05-19 16:11:24.259 Colors[52106:70b] Creating Offscreen Canvas (2D): size: 1842x28, retina: yes = 3684x56, msaa: no
+objc[52339]: Class JSWTFMainThreadCaller is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore and /Users/dvilchez/Library/Application Support/iPhone Simulator/7.1/Applications/A8DE18BB-B3D9-4D69-AE48-FBF3131F546B/Colors.app/Colors. One of the two will be used. Which one is undefined.
+2014-05-19 16:12:38.089 Colors[52339:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 2048x1536, retina: yes = 2048x1536, msaa: no
+2014-05-19 16:12:38.108 Colors[52339:70b] Loading Image: media/garab_black.font.png
+2014-05-19 16:12:38.110 Colors[52339:70b] Loading Image: media/sr_strawberry.png
+2014-05-19 16:12:38.120 Colors[52339:70b] Loading Image: media/fresa01.png
+2014-05-19 16:12:38.142 Colors[52339:70b] Loading Image: media/fresa02.png
+2014-05-19 16:12:38.143 Colors[52339:70b] Loading Image: media/fresa03.png
+2014-05-19 16:12:38.144 Colors[52339:70b] Loading Image: media/blanco.png
+2014-05-19 16:12:38.145 Colors[52339:70b] Loading Image: media/fondo_rojo.png
+2014-05-19 16:12:38.146 Colors[52339:70b] Loading Image: media/textura_rojo.png
+2014-05-19 16:12:38.147 Colors[52339:70b] Loading Image: media/naranja_01.png
+2014-05-19 16:12:38.148 Colors[52339:70b] Loading Image: media/naranja_02.png
+2014-05-19 16:12:38.149 Colors[52339:70b] Loading Image: media/sr_orange.png
+2014-05-19 16:12:38.150 Colors[52339:70b] Loading Image: media/fondo_naranja.png
+2014-05-19 16:12:38.152 Colors[52339:70b] Loading Image: media/textura_naranja.png
+2014-05-19 16:12:38.152 Colors[52339:70b] Loading Image: media/02_rayos.png
+2014-05-19 16:12:38.153 Colors[52339:70b] Loading Image: media/sr_yellow.png
+2014-05-19 16:12:38.154 Colors[52339:70b] Loading Image: media/fondo_amarillo.png
+2014-05-19 16:12:38.155 Colors[52339:70b] Loading Image: media/rayos.png
+2014-05-19 16:12:38.155 Colors[52339:70b] Loading Image: media/03_sol.png
+2014-05-19 16:12:38.157 Colors[52339:70b] Loading Image: media/textura_amarillo.png
+2014-05-19 16:12:38.159 Colors[52339:70b] Loading Image: media/sr_green.png
+2014-05-19 16:12:38.161 Colors[52339:70b] Loading Image: media/arbol01_sprite.png
+2014-05-19 16:12:38.162 Colors[52339:70b] Loading Image: media/fondo_verde.png
+2014-05-19 16:12:38.164 Colors[52339:70b] Loading Image: media/flecha_izquierda.png
+2014-05-19 16:12:38.166 Colors[52339:70b] Loading Image: media/flecha_derecha.png
+2014-05-19 16:12:38.168 Colors[52339:70b] Loading Image: media/garab_white.font.png
+2014-05-19 16:12:38.169 Colors[52339:70b] Loading Image: media/garab_black2.font.png
+2014-05-19 16:12:38.170 Colors[52339:70b] Loading Image: media/garab_white2.font.png
+2014-05-19 16:12:38.359 Colors[52339:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 1024x1536, retina: yes = 1024x1536, msaa: no
+2014-05-19 16:12:38.365 Colors[52339:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 1024x768, retina: yes = 1024x768, msaa: no
+2014-05-19 16:12:38.440 Colors[52339:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-19 16:12:40.249 Colors[52339:1203] Loading Sound(AVAudio): media/background.mp3
+2014-05-19 16:12:40.276 Colors[52339:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
