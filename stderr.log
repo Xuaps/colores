@@ -1012,3 +1012,115 @@ objc[3982]: Class JSWTFMainThreadCaller is implemented in both /Applications/Xco
 2014-05-21 09:53:00.194 Colors[3982:70b] Creating Offscreen Canvas (2D): size: 1572x55, retina: yes = 1572x55, msaa: no
 2014-05-21 09:53:00.275 Colors[3982:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
 2014-05-21 09:53:00.285 Colors[3982:70b] Creating Offscreen Canvas (2D): size: 1572x55, retina: yes = 1572x55, msaa: no
+objc[15071]: Class JSWTFMainThreadCaller is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore and /Users/dvilchez/Library/Application Support/iPhone Simulator/7.1/Applications/79D5A644-417B-4C76-8211-ACEB974A52BC/Colors.app/Colors. One of the two will be used. Which one is undefined.
+2014-05-22 12:35:37.261 Colors[15071:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 2048x1536, retina: yes = 2048x1536, msaa: no
+2014-05-22 12:35:37.331 Colors[15071:70b] Loading Image: media/garab_black.font.png
+2014-05-22 12:35:37.333 Colors[15071:70b] Loading Image: media/sr_strawberry.png
+2014-05-22 12:35:37.333 Colors[15071:70b] Loading Image: media/fresa01.png
+2014-05-22 12:35:37.334 Colors[15071:70b] Loading Image: media/fresa02.png
+2014-05-22 12:35:37.334 Colors[15071:70b] Loading Image: media/fresa03.png
+2014-05-22 12:35:37.336 Colors[15071:70b] Loading Image: media/blanco.png
+2014-05-22 12:35:37.337 Colors[15071:70b] Loading Image: media/fondo_rojo.png
+2014-05-22 12:35:37.339 Colors[15071:70b] Loading Image: media/textura_rojo.png
+2014-05-22 12:35:37.340 Colors[15071:70b] Loading Image: media/naranja_01.png
+2014-05-22 12:35:37.341 Colors[15071:70b] Loading Image: media/naranja_02.png
+2014-05-22 12:35:37.341 Colors[15071:70b] Loading Image: media/sr_orange.png
+2014-05-22 12:35:37.342 Colors[15071:70b] Loading Image: media/fondo_naranja.png
+2014-05-22 12:35:37.343 Colors[15071:70b] Loading Image: media/textura_naranja.png
+2014-05-22 12:35:37.343 Colors[15071:70b] Loading Image: media/02_rayos.png
+2014-05-22 12:35:37.344 Colors[15071:70b] Loading Image: media/sr_yellow.png
+2014-05-22 12:35:37.344 Colors[15071:70b] Loading Image: media/fondo_amarillo.png
+2014-05-22 12:35:37.345 Colors[15071:70b] Loading Image: media/rayos.png
+2014-05-22 12:35:37.346 Colors[15071:70b] Loading Image: media/03_sol.png
+2014-05-22 12:35:37.346 Colors[15071:70b] Loading Image: media/textura_amarillo.png
+2014-05-22 12:35:37.347 Colors[15071:70b] Loading Image: media/sr_green.png
+2014-05-22 12:35:37.348 Colors[15071:70b] Loading Image: media/arbol01_sprite.png
+2014-05-22 12:35:37.348 Colors[15071:70b] Loading Image: media/arbol02_sprite.png
+2014-05-22 12:35:37.349 Colors[15071:70b] Loading Image: media/fondo_verde.png
+2014-05-22 12:35:37.349 Colors[15071:70b] Loading Image: media/sr_blue.png
+2014-05-22 12:35:37.350 Colors[15071:70b] Loading Image: media/nube01.png
+2014-05-22 12:35:37.350 Colors[15071:70b] Loading Image: media/nube02.png
+2014-05-22 12:35:37.351 Colors[15071:70b] Loading Image: media/nube03.png
+2014-05-22 12:35:37.351 Colors[15071:70b] Loading Image: media/nube04.png
+2014-05-22 12:35:37.352 Colors[15071:70b] Loading Image: media/nube05.png
+2014-05-22 12:35:37.352 Colors[15071:70b] Loading Image: media/pajaro.png
+2014-05-22 12:35:37.353 Colors[15071:70b] Loading Image: media/fondo_azul.png
+2014-05-22 12:35:37.353 Colors[15071:70b] Loading Image: media/olas01.png
+2014-05-22 12:35:37.354 Colors[15071:70b] Loading Image: media/olas02.png
+2014-05-22 12:35:37.355 Colors[15071:70b] Loading Image: media/olas03.png
+2014-05-22 12:35:37.355 Colors[15071:70b] Loading Image: media/olas04.png
+2014-05-22 12:35:37.356 Colors[15071:70b] Loading Image: media/olas05.png
+2014-05-22 12:35:37.357 Colors[15071:70b] Loading Image: media/olas06.png
+2014-05-22 12:35:37.359 Colors[15071:70b] Loading Image: media/sr_indigo.png
+2014-05-22 12:35:37.362 Colors[15071:70b] Loading Image: media/fondo_anil.png
+2014-05-22 12:35:37.363 Colors[15071:70b] Loading Image: media/textura_anil.png
+2014-05-22 12:35:37.363 Colors[15071:70b] Loading Image: media/garab_white.font.png
+2014-05-22 12:35:37.364 Colors[15071:70b] Loading Image: media/garab_black2.font.png
+2014-05-22 12:35:37.365 Colors[15071:70b] Loading Image: media/garab_white2.font.png
+2014-05-22 12:35:37.366 Colors[15071:70b] Loading Image: media/flecha_derecha.png
+2014-05-22 12:35:37.367 Colors[15071:70b] Loading Image: media/flecha_izquierda.png
+2014-05-22 12:35:37.781 Colors[15071:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 1024x1536, retina: yes = 1024x1536, msaa: no
+2014-05-22 12:35:37.786 Colors[15071:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 1024x768, retina: yes = 1024x768, msaa: no
+2014-05-22 12:35:37.806 Colors[15071:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:35:40.492 Colors[15071:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:35:40.498 Colors[15071:1203] Loading Sound(AVAudio): media/background2.caf
+2014-05-22 12:35:40.797 Colors[15071:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:35:40.805 Colors[15071:70b] Creating Offscreen Canvas (2D): size: 1572x55, retina: yes = 1572x55, msaa: no
+2014-05-22 12:35:40.863 Colors[15071:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:35:40.871 Colors[15071:70b] Creating Offscreen Canvas (2D): size: 1572x55, retina: yes = 1572x55, msaa: no
+objc[15351]: Class JSWTFMainThreadCaller is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore and /Users/dvilchez/Library/Application Support/iPhone Simulator/7.1/Applications/79D5A644-417B-4C76-8211-ACEB974A52BC/Colors.app/Colors. One of the two will be used. Which one is undefined.
+2014-05-22 12:38:10.598 Colors[15351:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 2048x1536, retina: yes = 2048x1536, msaa: no
+2014-05-22 12:38:10.615 Colors[15351:70b] Loading Image: media/garab_black.font.png
+2014-05-22 12:38:10.616 Colors[15351:70b] Loading Image: media/sr_strawberry.png
+2014-05-22 12:38:10.617 Colors[15351:70b] Loading Image: media/fresa01.png
+2014-05-22 12:38:10.618 Colors[15351:70b] Loading Image: media/fresa02.png
+2014-05-22 12:38:10.618 Colors[15351:70b] Loading Image: media/fresa03.png
+2014-05-22 12:38:10.618 Colors[15351:70b] Loading Image: media/blanco.png
+2014-05-22 12:38:10.619 Colors[15351:70b] Loading Image: media/fondo_rojo.png
+2014-05-22 12:38:10.620 Colors[15351:70b] Loading Image: media/textura_rojo.png
+2014-05-22 12:38:10.620 Colors[15351:70b] Loading Image: media/naranja_01.png
+2014-05-22 12:38:10.621 Colors[15351:70b] Loading Image: media/naranja_02.png
+2014-05-22 12:38:10.622 Colors[15351:70b] Loading Image: media/sr_orange.png
+2014-05-22 12:38:10.623 Colors[15351:70b] Loading Image: media/fondo_naranja.png
+2014-05-22 12:38:10.623 Colors[15351:70b] Loading Image: media/textura_naranja.png
+2014-05-22 12:38:10.623 Colors[15351:70b] Loading Image: media/02_rayos.png
+2014-05-22 12:38:10.624 Colors[15351:70b] Loading Image: media/sr_yellow.png
+2014-05-22 12:38:10.624 Colors[15351:70b] Loading Image: media/fondo_amarillo.png
+2014-05-22 12:38:10.624 Colors[15351:70b] Loading Image: media/rayos.png
+2014-05-22 12:38:10.625 Colors[15351:70b] Loading Image: media/03_sol.png
+2014-05-22 12:38:10.625 Colors[15351:70b] Loading Image: media/textura_amarillo.png
+2014-05-22 12:38:10.626 Colors[15351:70b] Loading Image: media/sr_green.png
+2014-05-22 12:38:10.626 Colors[15351:70b] Loading Image: media/arbol01_sprite.png
+2014-05-22 12:38:10.626 Colors[15351:70b] Loading Image: media/arbol02_sprite.png
+2014-05-22 12:38:10.627 Colors[15351:70b] Loading Image: media/fondo_verde.png
+2014-05-22 12:38:10.627 Colors[15351:70b] Loading Image: media/sr_blue.png
+2014-05-22 12:38:10.627 Colors[15351:70b] Loading Image: media/nube01.png
+2014-05-22 12:38:10.631 Colors[15351:70b] Loading Image: media/nube02.png
+2014-05-22 12:38:10.632 Colors[15351:70b] Loading Image: media/nube03.png
+2014-05-22 12:38:10.632 Colors[15351:70b] Loading Image: media/nube04.png
+2014-05-22 12:38:10.633 Colors[15351:70b] Loading Image: media/nube05.png
+2014-05-22 12:38:10.634 Colors[15351:70b] Loading Image: media/pajaro.png
+2014-05-22 12:38:10.634 Colors[15351:70b] Loading Image: media/fondo_azul.png
+2014-05-22 12:38:10.634 Colors[15351:70b] Loading Image: media/olas01.png
+2014-05-22 12:38:10.635 Colors[15351:70b] Loading Image: media/olas02.png
+2014-05-22 12:38:10.636 Colors[15351:70b] Loading Image: media/olas03.png
+2014-05-22 12:38:10.636 Colors[15351:70b] Loading Image: media/olas04.png
+2014-05-22 12:38:10.636 Colors[15351:70b] Loading Image: media/olas05.png
+2014-05-22 12:38:10.637 Colors[15351:70b] Loading Image: media/olas06.png
+2014-05-22 12:38:10.637 Colors[15351:70b] Loading Image: media/sr_indigo.png
+2014-05-22 12:38:10.638 Colors[15351:70b] Loading Image: media/fondo_anil.png
+2014-05-22 12:38:10.638 Colors[15351:70b] Loading Image: media/textura_anil.png
+2014-05-22 12:38:10.638 Colors[15351:70b] Loading Image: media/garab_white.font.png
+2014-05-22 12:38:10.639 Colors[15351:70b] Loading Image: media/garab_black2.font.png
+2014-05-22 12:38:10.639 Colors[15351:70b] Loading Image: media/garab_white2.font.png
+2014-05-22 12:38:10.640 Colors[15351:70b] Loading Image: media/flecha_derecha.png
+2014-05-22 12:38:10.641 Colors[15351:70b] Loading Image: media/flecha_izquierda.png
+2014-05-22 12:38:10.899 Colors[15351:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 1024x1536, retina: yes = 1024x1536, msaa: no
+2014-05-22 12:38:10.906 Colors[15351:70b] Creating ScreenCanvas (2D): size: 2048x1536, style: 1024x768, retina: yes = 1024x768, msaa: no
+2014-05-22 12:38:11.003 Colors[15351:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:38:15.127 Colors[15351:1203] Loading Sound(AVAudio): media/background2.caf
+2014-05-22 12:38:15.134 Colors[15351:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:38:15.412 Colors[15351:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:38:15.419 Colors[15351:70b] Creating Offscreen Canvas (2D): size: 1572x55, retina: yes = 1572x55, msaa: no
+2014-05-22 12:38:15.499 Colors[15351:70b] Creating Offscreen Canvas (2D): size: 3684x56, retina: yes = 3684x56, msaa: no
+2014-05-22 12:38:15.510 Colors[15351:70b] Creating Offscreen Canvas (2D): size: 1572x55, retina: yes = 1572x55, msaa: no
