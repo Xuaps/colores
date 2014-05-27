@@ -12,6 +12,8 @@ CONFIGURATION=Debug
 LOGFILE=stderr.log
  
 tools/bake.sh
+rsync -cr media ejecta/App/.
+rsync -c game.min.js ejecta/App/.
 xcodebuild -configuration $CONFIGURATION -sdk iphonesimulator7.1 -project ejecta/$PROJECTNAME.xcodeproj -arch i386 clean build
 ios-sim launch ejecta/build/$CONFIGURATION-iphonesimulator/$PROJECTNAME.app --family ipad --stderr $LOGFILE --exit 
 tail -f $LOGFILE 

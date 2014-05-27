@@ -120,6 +120,7 @@
 		E31E34DD192A2F7800455D3F /* icon-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D1192A2F7800455D3F /* icon-50@2x.png */; };
 		E31E34DE192A2F7800455D3F /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D2192A2F7800455D3F /* icon-small.png */; };
 		E31E34DF192A2F7800455D3F /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D3192A2F7800455D3F /* icon-small@2x.png */; };
+		E354461E19347776007AB365 /* GARABD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = E354461D19347776007AB365 /* GARABD.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -312,6 +313,7 @@
 		E31E34D1192A2F7800455D3F /* icon-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50@2x.png"; sourceTree = "<group>"; };
 		E31E34D2192A2F7800455D3F /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		E31E34D3192A2F7800455D3F /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		E354461D19347776007AB365 /* GARABD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GARABD.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,6 +558,7 @@
 		B64CE683166682B10087CF94 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E354461D19347776007AB365 /* GARABD.TTF */,
 				E31E34C7192A2F2700455D3F /* Default.png */,
 				E31E34C9192A2F7800455D3F /* Default@2x.png */,
 				E31E34CE192A2F7800455D3F /* icon-40.png */,
@@ -684,7 +687,7 @@
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = TYQN4X28QA;
+						DevelopmentTeam = 5RK27BZSR7;
 					};
 				};
 			};
@@ -728,6 +731,7 @@
 				B64CE696166682B10087CF94 /* Icon-72@2x.png in Resources */,
 				B64CE697166682B10087CF94 /* Icon.png in Resources */,
 				B64CE698166682B10087CF94 /* Icon@2x.png in Resources */,
+				E354461E19347776007AB365 /* GARABD.TTF in Resources */,
 				B64CE699166682B10087CF94 /* MainWindow.xib in Resources */,
 				B62436681666851E0046B8C7 /* Ejecta.js in Resources */,
 				B99F05C1188C4125002F194D /* Icon-60.png in Resources */,
@@ -824,6 +828,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -843,6 +849,7 @@
 				);
 				OTHER_CFLAGS = "-DDEBUG";
 				PRODUCT_NAME = Colors;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				"VALID_ARCHS[sdk=*]" = "armv7 armv7s arm64 i386";
 			};
@@ -853,6 +860,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -868,6 +877,7 @@
 					"\"$(SRCROOT)/Source/lib\"",
 				);
 				PRODUCT_NAME = Colors;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
