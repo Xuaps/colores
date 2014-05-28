@@ -17,7 +17,7 @@ describe('settings', function(){
 			expect(ig.settings).toBeDefined();
 			expect(ig.settings.narration).toBe(true);
 			expect(ig.settings.music).toBe(true);
-			expect(ig.settings.language).toEqual('es-ES');
+			expect(ig.settings.language).toEqual('es');
 		});
 	});
 
@@ -25,12 +25,12 @@ describe('settings', function(){
 		it('should load saved values', function(){
 			localStorage.setItem('narration', 'false');
 			localStorage.setItem('music', 'false');
-			localStorage.setItem('language', 'en-US');
+			localStorage.setItem('language', 'en');
 			ig.settings.init();
 
 			expect(ig.settings.narration).toBe(false);
 			expect(ig.settings.music).toBe(false);
-			expect(ig.settings.language).toEqual('en-US');
+			expect(ig.settings.language).toEqual('en');
 		});
 	});
 
@@ -38,12 +38,12 @@ describe('settings', function(){
 		it('should save settings values', function(){
 			ig.settings.narration=false;
 			ig.settings.music=true;
-			ig.settings.language='en-US';
+			ig.settings.language='en';
 			ig.settings.save();
 
 			expect(localStorage.getItem('narration')).toBe('false');
 			expect(localStorage.getItem('music')).toBe('true');
-			expect(localStorage.getItem('language')).toEqual('en-US');
+			expect(localStorage.getItem('language')).toEqual('en');
 		});
 	})
 });
