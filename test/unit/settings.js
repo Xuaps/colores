@@ -12,9 +12,38 @@ describe('settings', function(){
 		}, "Waiting for module", 500);
 	});
 
-	describe('initialize', function(){
-		it('should be', function(){
-			expect(ig.settings).toBeUndefined();
+	describe('initialize first time', function(){
+		it('should load default values', function(){
+			expect(ig.settings).toBeDefined();
+			expect(ig.settings.narration).toBe(true);
+			expect(ig.settings.music).toBe(true);
+			expect(ig.settings.language).toEqual('es-ES');
 		});
 	});
+
+	describe('initialize after first time', function(){
+		it('should load saved values', function(){
+			localStorage.setItem('narration', 'false');
+			localStorage.setItem('music', 'false');
+			localStorage.setItem('language', 'en-US');
+			ig.settings.init();
+
+			expect(ig.settings.narration).toBe(false);
+			expect(ig.settings.music).toBe(false);
+			expect(ig.settings.language).toEqual('en-US');
+		});
+	});
+
+	describe('save', function(){
+		it('should save settings values', function(){
+			ig.settings.narration=false;
+			ig.settings.music=false;
+			ig.settings.language='en-US';
+			ig.settings.save();
+
+			expect(localStorage.getItem('narration')).toBe('false');
+			expect(localStorage.getItem('music')).toBe('false');
+			expect(localStorage.getItem('language')).toEqual('en-US');
+		});
+	})
 });
