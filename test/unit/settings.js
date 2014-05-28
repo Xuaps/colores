@@ -37,12 +37,12 @@ describe('settings', function(){
 	describe('save', function(){
 		it('should save settings values', function(){
 			ig.settings.narration=false;
-			ig.settings.music=false;
+			ig.settings.music=true;
 			ig.settings.language='en-US';
 			ig.settings.save();
 
 			expect(localStorage.getItem('narration')).toBe('false');
-			expect(localStorage.getItem('music')).toBe('false');
+			expect(localStorage.getItem('music')).toBe('true');
 			expect(localStorage.getItem('language')).toEqual('en-US');
 		});
 	})
