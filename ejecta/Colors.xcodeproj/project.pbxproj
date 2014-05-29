@@ -828,8 +828,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: David Vilchez Mendoza (FNP8UT7QZU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Vilchez Mendoza (FNP8UT7QZU)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -849,7 +849,7 @@
 				);
 				OTHER_CFLAGS = "-DDEBUG";
 				PRODUCT_NAME = Colors;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3687C0AD-AB31-45A8-A3EC-398ACC2DA651";
 				TARGETED_DEVICE_FAMILY = 2;
 				"VALID_ARCHS[sdk=*]" = "armv7 armv7s arm64 i386";
 			};
@@ -860,8 +860,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Vilchez Mendoza (5RK27BZSR7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Vilchez Mendoza (5RK27BZSR7)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -877,7 +877,7 @@
 					"\"$(SRCROOT)/Source/lib\"",
 				);
 				PRODUCT_NAME = Colors;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "BDCADACC-61FC-4BF5-BFB7-DA83A9F189FC";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};

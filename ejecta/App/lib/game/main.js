@@ -11,6 +11,7 @@ ig.module(
 	'game.levels.green',
 	'game.levels.azul',
 	'game.levels.anil',
+	'game.levels.violeta',
 	'game.levels.settings',
 	'plugins.debug',
 	'plugins.touch-button',
@@ -32,7 +33,7 @@ ig.module(
 		buttonNextImage: new ig.Image('media/flecha_derecha.png'),
 		buttonBackImage: new ig.Image('media/flecha_izquierda.png'),
 		buttonSettingsImage: new ig.Image('media/preferencias_negro.png'),
-		levels: [LevelRojo, LevelNaranja, LevelAmarillo, LevelGreen, LevelAzul, LevelAnil],
+		levels: [LevelRojo, LevelNaranja, LevelAmarillo, LevelGreen, LevelAzul, LevelAnil, LevelVioleta],
 		currentLevel: 0,
 		narration:null,
 
