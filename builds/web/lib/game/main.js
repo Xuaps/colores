@@ -2,6 +2,7 @@ ig.module(
 	'game.main'
 )
 .requires(
+	'impact.debug.debug',
 	'impact.game',
 	'impact.font',
 	'game.levels.rojo',
@@ -11,13 +12,12 @@ ig.module(
 	'game.levels.azul',
 	'game.levels.anil',
 	'game.levels.settings',
-	//'plugins.debug',
+	'plugins.debug',
 	'plugins.touch-button',
 	'plugins.check-touch-button',
 	'plugins.i18n',
 	'plugins.locales',
-	'plugins.settings',
-	'impact.debug.debug'
+	'plugins.settings'
 )
 .defines(function(){
 
@@ -70,6 +70,8 @@ ig.module(
 				this.loadLevel(this.levels[this.currentLevel]);
 				this.play_narration();
 			}else if(ig.input.pressed('settings')){
+				if(this.narration)
+					this.narration.stop();
 				ig.system.setGame(SettingsGame);
 			}
 		},
@@ -162,27 +164,26 @@ ig.module(
 			ig.system.context.fillStyle="#FFFFFF";
 			ig.system.context.textAlign = 'center';
 			ig.system.context.font = '60pt Garamond-Bold';
-			ig.system.context.fillText(i18n.t("preferencias.titulo"), 1024, 150);
+			ig.system.context.fillText(i18n.t("LevelSettings.titulo"), 1024, 150);
 			ig.system.context.font = '48pt Garamond-Bold';
-			ig.system.context.fillText(i18n.t("preferencias.idioma"), 512, 370);
-			ig.system.context.fillText(i18n.t("preferencias.sonido"), 1536, 370);
+			ig.system.context.fillText(i18n.t("LevelSettings.idioma"), 512, 370);
+			ig.system.context.fillText(i18n.t("LevelSettings.sonido"), 1536, 370);
 			ig.system.context.textAlign = 'left';
 			ig.system.context.fillText(i18n.t("Galego"), 415, 570);
 			ig.system.context.fillText(i18n.t("Español"), 415, 720);
 			ig.system.context.fillText(i18n.t("English"), 415, 870);
-			ig.system.context.fillText(i18n.t("preferencias.narracion"), 1450, 570);
-			ig.system.context.fillText(i18n.t("preferencias.musica"), 1450, 720);
+			ig.system.context.fillText(i18n.t("LevelSettings.narracion"), 1450, 570);
+			ig.system.context.fillText(i18n.t("LevelSettings.musica"), 1450, 720);
 			ig.system.context.font = '38pt Garamond-Bold';
-			ig.system.context.fillText(i18n.t("preferencias.aceptar"), 1730, 1450);
-			ig.system.context.fillText(i18n.t("preferencias.cancelar"), 120, 1450);
+			ig.system.context.fillText(i18n.t("LevelSettings.aceptar"), 1730, 1450);
+			ig.system.context.fillText(i18n.t("LevelSettings.cancelar"), 120, 1450);
 		}
 	});
 
-	i18n.init({ resStore: ig.locales }, function(){
-		i18n.setLng(ig.settings.language);
+	i18n.init({ resStore: ig.locales, lng: ig.settings.language}, function(){
 		ig.Sound.use = [ig.Sound.FORMAT.CAF, ig.Sound.FORMAT.OGG, ig.Sound.FORMAT.MP3];
 		ig.main( '#canvas', MyGame, 60, 2048, 1536,  1);
-		//ig.input.bind( ig.KEY.MOUSE1, 'click' );
+		ig.input.bind( ig.KEY.MOUSE1, 'click' );
 		ig.$('#canvas').style.width=ig.global.innerWidth+'px';
 		ig.$('#canvas').style.height=3*(ig.global.innerWidth/4)+'px';
 	});

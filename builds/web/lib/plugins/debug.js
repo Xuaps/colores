@@ -2,7 +2,8 @@ ig.module(
 	'plugins.debug'
 )
 .requires(
-	'impact.system'
+	'impact.system',
+	'impact.font'
 )
 .defines(function(){
 

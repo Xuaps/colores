@@ -13,6 +13,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jsduck');
 	grunt.loadNpmTasks('grunt-karma');
 	grunt.loadNpmTasks('grunt-exec');
+	grunt.loadNpmTasks('grunt-file-creator');
 
 	var pkg = grunt.file.readJSON('package.json');
 	grunt.initConfig({
@@ -50,6 +51,7 @@ module.exports = function(grunt) {
 		},
 		clean: {
 			builds: ['builds/**/*'],
+			ejecta: ['ejecta/App/**/*'],
 			lib: ['builds/tmp/lib'],
 			tmp: ['builds/tmp']
 		},
@@ -68,9 +70,21 @@ module.exports = function(grunt) {
 					to: ''
 				}],
 			},
-			impact_debug: {
+			debug_info: {
 				src: ['builds/tmp/lib/game/main.js'],
 				dest: 'builds/tmp/lib/game/main.js',
+				replacements: [{
+					from: '\'impact.debug.debug\',',
+					to: ''
+				},
+				{
+					from: '\'plugins.debug\',',
+					to: ''
+				}],
+			},
+			ej_impact_debug: {
+				src: ['ejecta/App/lib/game/main.js'],
+				dest: 'ejecta/App/lib/game/main.js',
 				replacements: [{
 					from: '\'impact.debug.debug\',',
 					to: ''
@@ -108,6 +122,11 @@ module.exports = function(grunt) {
 				files: [
 					{ expand: true, cwd: 'builds/tmp', src: ['**'], dest: 'builds/web/', dot: true }
 				]
+			},
+			ejecta: {
+				files: [
+					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html'], dest: 'ejecta/App/', dot: true }
+				]
 			}
 		},
 		jsduck: {
@@ -125,17 +144,33 @@ module.exports = function(grunt) {
 		jshint: {
 			options: { trailing: true },
 			target: { src: ['lib/game/**/*.js'] }
-		}
+		},
+		'file-creator': {
+		    "ejecta_debug": {
+		      "ejecta/App/index.js": function(fs, fd, done) {
+		        fs.writeSync(fd, "ejecta.include('lib/impact/impact.js');\nejecta.include('lib/game/main.js');");
+		        done();
+		      }
+		    },
+		    "ejecta_release": {
+		      "ejecta/App/index.js": function(fs, fd, done) {
+		        fs.writeSync(fd, "ejecta.include('js/game.min.js');");
+		        done();
+		      }
+		    }
+		  }
 	});
 
 	// Helper tasks, not intended to be run alone
 	grunt.registerTask('build-tmp', ['clean:builds', 'mkdir:tmp', 'copy:tmp', 'replace:build_info', 'replace:impact_links']);
-	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:impact_debug', 'shell:game', 'clean:lib', 'uglify:game']);
+	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:debug_info', 'shell:game', 'clean:lib', 'uglify:game']);
 	grunt.registerTask('build-platforms', ['copy:web']);
+	grunt.registerTask('build-debug-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_debug','replace:ej_impact_debug']);
+	grunt.registerTask('build-release-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_release']);
 
 	// Build types
-	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'clean:tmp']);
-	grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
+	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
+	grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp']);
 
 	// Dev tasks
 	grunt.registerTask('doc', ['jshint', 'jsduck']);

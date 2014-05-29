@@ -32,5 +32,8 @@
     "karma": "~0.10.9",
     "grunt-karma": "~0.6.2",
     "grunt-exec": "~0.4.3"
+  },
+  "dependencies": {
+    "grunt-file-creator": "^0.1.1"
   }
 }
