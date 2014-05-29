@@ -44,6 +44,15 @@ module.exports = function(grunt) {
 				options: {
 					stdout: true
 				}
+			},
+			emulate: {
+				command: [
+					'xcodebuild -configuration Debug -sdk iphonesimulator7.1 -project ejecta/Colors.xcodeproj -arch i386 clean build',
+					'ios-sim launch ejecta/build/Debug-iphonesimulator/Colors.app --family ipad --stderr stderr.log --exit '
+				].join('&&'),
+				options: {
+					stdout: true
+				}
 			}
 		},
 		mkdir: {
@@ -177,4 +186,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('clean-builds', ['clean:builds']);
 	grunt.registerTask('test', ['debug', 'karma:unit', 'clean:tmp']);
+	grunt.registerTask('emulate_ios', ['debug', 'shell:emulate'])
 };
