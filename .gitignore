@@ -1,1 +1,8 @@
-builds
+builds/
+ejecta/build/
+ejecta/App/
+
+node_modules/
+
+
+stderr.log
