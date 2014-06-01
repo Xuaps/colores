@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0510"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -82,5 +82,23 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "xcrun -sdk iphoneos PackageApplication &quot;$ARCHIVE_PRODUCTS_PATH/$INSTALL_PATH/$WRAPPER_NAME&quot; -o &quot;${HOME}/workspace/colores/builds/ios/${PRODUCT_NAME}.ipa&quot;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
+                     BuildableName = "Colors.app"
+                     BlueprintName = "Colors"
+                     ReferencedContainer = "container:Colors.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>

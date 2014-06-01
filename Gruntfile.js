@@ -60,13 +60,36 @@ module.exports = function(grunt) {
 					failOnError: true,
 					stdout: true
 				}
-			}
+			},
+			generate_ipa: {
+				command: 
+					'cd ejecta && xcodebuild -scheme Colors archive && cd ..'
+				,
+				options: {
+					failOnError: true,
+					stdout: false,
+					execOptions: {
+				      maxBuffer: 1000*1024
+				    },
+				},
+				
+			},
+			upload_ipa: {
+				command: 
+					"curl http://testflightapp.com/api/builds.json -F file=@builds/ios/Colors.ipa -F api_token='7a851de2182ced682c31e5f6242ccaac_MTg4NTc3NDIwMTQtMDYtMDEgMTM6MDM6MjEuNjc2NTAy' -F team_token='d43daeca16bc212676bc17d8f47f2164_Mzg3NzkwMjAxNC0wNi0wMSAxMzoxMDoyNy4yODA4NDQ' -F notes='This build was uploaded via the upload API' -F notify=True -F distribution_lists='core'",
+				options: {
+					failOnError: true,
+					stdout: true,
+					stderr: true
+				}
+			},
+
 		},
 		mkdir: {
 			tmp: { options: { create: ['builds/tmp', 'builds/tmp/js'] } }
 		},
 		clean: {
-			builds: ['builds/**/*'],
+			builds: ['builds/web/**/*'],
 			ejecta: ['ejecta/App/**/*'],
 			lib: ['builds/tmp/lib'],
 			tmp: ['builds/tmp']
@@ -181,13 +204,15 @@ module.exports = function(grunt) {
 	grunt.registerTask('build-release-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_release']);
 
 	// Build types
-	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
-	grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp']);
+	grunt.registerTask('web-debug', ['jshint', 'build-tmp', 'build-platforms', 'clean:tmp']);
+	grunt.registerTask('web-release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
 
+	grunt.registerTask('ejecta-debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
+	grunt.registerTask('ejecta-release', ['jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa"]);
 	// Dev tasks
 	grunt.registerTask('doc', ['jshint', 'jsduck']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('clean-builds', ['clean:builds']);
 	grunt.registerTask('test', ['debug', 'karma:unit', 'clean:tmp']);
-	grunt.registerTask('emulate_ios', ['debug',  'shell:build', 'shell:emulate'])
+	//grunt.registerTask('emulate_ios', ['ejecta-debug',  'shell:build', 'shell:emulate'])
 };
