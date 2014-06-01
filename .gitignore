@@ -1,6 +1,7 @@
 builds/
 ejecta/build/
 ejecta/App/
+xcuserdata/
 
 node_modules/
 
