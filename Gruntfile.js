@@ -92,10 +92,6 @@ module.exports = function(grunt) {
 				replacements: [{
 					from: '\'impact.debug.debug\',',
 					to: ''
-				},
-				{
-					from: '\'plugins.debug\',',
-					to: ''
 				}],
 			},
 			ej_impact_debug: {
@@ -103,7 +99,7 @@ module.exports = function(grunt) {
 				dest: 'ejecta/App/lib/game/main.js',
 				replacements: [{
 					from: '\'impact.debug.debug\',',
-					to: ''
+					to: '\'plugins.debug\''
 				}],
 			},
 			build_info: {
