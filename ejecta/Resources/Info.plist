@@ -62,7 +62,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
+<<<<<<< Updated upstream
 	<string>6</string>
+=======
+	<string>36</string>
+>>>>>>> Stashed changes
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
