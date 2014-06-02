@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 				dest: 'ejecta/App/lib/game/main.js',
 				replacements: [{
 					from: '\'impact.debug.debug\',',
-					to: '\'plugins.debug\''
+					to: '\'plugins.debug\','
 				}],
 			},
 			build_info: {
