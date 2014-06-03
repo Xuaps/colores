@@ -204,11 +204,11 @@ module.exports = function(grunt) {
 	grunt.registerTask('build-release-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_release']);
 
 	// Build types
-	grunt.registerTask('web-debug', ['jshint', 'build-tmp', 'build-platforms', 'clean:tmp']);
-	grunt.registerTask('web-release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
+	//grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'clean:tmp']);
+	//grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
 
-	grunt.registerTask('ejecta-debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
-	grunt.registerTask('ejecta-release', ['jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa"]);
+	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
+	grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa"]);
 	// Dev tasks
 	grunt.registerTask('doc', ['jshint', 'jsduck']);
 	grunt.registerTask('lint', ['jshint']);
