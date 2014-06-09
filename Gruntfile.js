@@ -74,9 +74,18 @@ module.exports = function(grunt) {
 				},
 				
 			},
+			rollbar: {
+				command: 
+					'curl https://api.rollbar.com/api/1/deploy/ -F access_token=48c6534afdaa431a8eb851281afe2ea2 -F environment=production -F revision=`git log -n 1 --pretty=format:"%H"` -F local_username=`whoami`',
+				options: {
+					failOnError: true,
+					stdout: true,
+					stderr: true,
+				}
+			},
 			upload_ipa: {
 				command: 
-					"curl http://testflightapp.com/api/builds.json -F file=@builds/ios/Colors.ipa -F api_token='7a851de2182ced682c31e5f6242ccaac_MTg4NTc3NDIwMTQtMDYtMDEgMTM6MDM6MjEuNjc2NTAy' -F team_token='d43daeca16bc212676bc17d8f47f2164_Mzg3NzkwMjAxNC0wNi0wMSAxMzoxMDoyNy4yODA4NDQ' -F notes='<%= grunt.option('notes') %>' -F notify=True -F distribution_lists='core'",
+					"curl http://testflightapp.com/api/builds.json -F file=@builds/ios/Colors.ipa -F api_token='7a851de2182ced682c31e5f6242ccaac_MTg4NTc3NDIwMTQtMDYtMDEgMTM6MDM6MjEuNjc2NTAy' -F team_token='d43daeca16bc212676bc17d8f47f2164_Mzg3NzkwMjAxNC0wNi0wMSAxMzoxMDoyNy4yODA4NDQ' -F notes='`git log -n 1 --pretty=format:'%H'`-<%= grunt.option('notes') %>' -F notify=True -F distribution_lists='core'",
 				options: {
 					failOnError: true,
 					stdout: true,
@@ -213,7 +222,7 @@ module.exports = function(grunt) {
 	//grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
 
 	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
-	grunt.registerTask('release', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa"]);
+	grunt.registerTask('release', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:rollbar"]);//, "shell:generate_ipa", "shell:upload_ipa", "shell:rollbar"]);
 	// Dev tasks
 	grunt.registerTask('doc', ['jshint', 'jsduck']);
 	grunt.registerTask('lint', ['jshint']);
