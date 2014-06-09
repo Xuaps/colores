@@ -120,6 +120,8 @@
 		E31E34DD192A2F7800455D3F /* icon-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D1192A2F7800455D3F /* icon-50@2x.png */; };
 		E31E34DE192A2F7800455D3F /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D2192A2F7800455D3F /* icon-small.png */; };
 		E31E34DF192A2F7800455D3F /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E31E34D3192A2F7800455D3F /* icon-small@2x.png */; };
+		E33573EB194056C6003E0131 /* EJBindingSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = E33573EA194056C6003E0131 /* EJBindingSocial.m */; };
+		E33573ED194057E8003E0131 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33573EC194057E8003E0131 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E354461E19347776007AB365 /* GARABD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = E354461D19347776007AB365 /* GARABD.TTF */; };
 /* End PBXBuildFile section */
 
@@ -313,6 +315,9 @@
 		E31E34D1192A2F7800455D3F /* icon-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50@2x.png"; sourceTree = "<group>"; };
 		E31E34D2192A2F7800455D3F /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		E31E34D3192A2F7800455D3F /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		E33573E9194056C6003E0131 /* EJBindingSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJBindingSocial.h; sourceTree = "<group>"; };
+		E33573EA194056C6003E0131 /* EJBindingSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJBindingSocial.m; sourceTree = "<group>"; };
+		E33573EC194057E8003E0131 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E354461D19347776007AB365 /* GARABD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GARABD.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,6 +326,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E33573ED194057E8003E0131 /* Social.framework in Frameworks */,
 				33BE9DE41868183900E0D16E /* MobileCoreServices.framework in Frameworks */,
 				B6D4B283183CF43A008251EB /* CoreLocation.framework in Frameworks */,
 				B6CDA16018295A5F00190074 /* libc++.dylib in Frameworks */,
@@ -372,6 +378,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E33573EC194057E8003E0131 /* Social.framework */,
 				33BE9DE31868183900E0D16E /* MobileCoreServices.framework */,
 				B6D4B282183CF43A008251EB /* CoreLocation.framework */,
 				B6CDA15F18295A5F00190074 /* libc++.dylib */,
@@ -538,6 +545,8 @@
 				B63D256C16E8DFAB007E6034 /* EJBindingWebSocket.m */,
 				B6D4B27F183CDFBB008251EB /* EJBindingGeolocation.h */,
 				B6D4B280183CDFBB008251EB /* EJBindingGeolocation.m */,
+				E33573E9194056C6003E0131 /* EJBindingSocial.h */,
+				E33573EA194056C6003E0131 /* EJBindingSocial.m */,
 			);
 			path = EJUtils;
 			sourceTree = "<group>";
@@ -792,6 +801,7 @@
 				B64CE67E166682700087CF94 /* EJBindingTouchInput.m in Sources */,
 				B64CE67F166682700087CF94 /* AppDelegate.m in Sources */,
 				B64CE682166682700087CF94 /* main.m in Sources */,
+				E33573EB194056C6003E0131 /* EJBindingSocial.m in Sources */,
 				B6F9AFC0169F81D400ABD91A /* EJBindingWindowEvents.m in Sources */,
 				B6F114DF1676B4FE001F1324 /* EJBindingCanvas.m in Sources */,
 				B6F114E31676BAFB001F1324 /* EJCanvasContext.m in Sources */,
@@ -858,7 +868,7 @@
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -887,7 +897,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
