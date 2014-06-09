@@ -62,7 +62,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>96</string>
+	<string>115</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
@@ -149,7 +149,10 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array/>
+	<array>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
