@@ -18,6 +18,7 @@ describe('settings', function(){
 			expect(ig.settings.narration).toBe(true);
 			expect(ig.settings.music).toBe(true);
 			expect(ig.settings.language).toEqual('es');
+			expect(ig.settings.uuid).toBeDefined();
 		});
 	});
 
@@ -26,11 +27,13 @@ describe('settings', function(){
 			localStorage.setItem('narration', 'false');
 			localStorage.setItem('music', 'false');
 			localStorage.setItem('language', 'en');
+			localStorage.setItem('uuid','92bf24a5-20e5-4181-9778-2835f28c52d8')
 			ig.settings.init();
 
 			expect(ig.settings.narration).toBe(false);
 			expect(ig.settings.music).toBe(false);
 			expect(ig.settings.language).toEqual('en');
+			expect(ig.settings.uuid).toEqual('92bf24a5-20e5-4181-9778-2835f28c52d8');
 		});
 	});
 
@@ -45,5 +48,5 @@ describe('settings', function(){
 			expect(localStorage.getItem('music')).toBe('true');
 			expect(localStorage.getItem('language')).toEqual('en');
 		});
-	})
+	});
 });

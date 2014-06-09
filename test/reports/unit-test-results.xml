@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <testsuites>
-  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-05-28T11:31:14" id="0" hostname="acero.local" tests="3" errors="0" failures="0" time="0.058">
+  <testsuite name="PhantomJS 1.9.7 (Mac OS X)" package="" timestamp="2014-06-09T11:22:41" id="0" hostname="acero.local" tests="3" errors="0" failures="0" time="0.083">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.7 Safari/534.34"/>
     </properties>
-    <testcase name="should load default values" time="0.057" classname="PhantomJS 1.9.7 (Mac OS X).settings initialize first time"/>
+    <testcase name="should load default values" time="0.082" classname="PhantomJS 1.9.7 (Mac OS X).settings initialize first time"/>
     <testcase name="should load saved values" time="0" classname="PhantomJS 1.9.7 (Mac OS X).settings initialize after first time"/>
     <testcase name="should save settings values" time="0.001" classname="PhantomJS 1.9.7 (Mac OS X).settings save"/>
     <system-out><![CDATA[
