@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 			},
 			upload_ipa: {
 				command: 
-					"curl http://testflightapp.com/api/builds.json -F file=@builds/ios/Colors.ipa -F api_token='7a851de2182ced682c31e5f6242ccaac_MTg4NTc3NDIwMTQtMDYtMDEgMTM6MDM6MjEuNjc2NTAy' -F team_token='d43daeca16bc212676bc17d8f47f2164_Mzg3NzkwMjAxNC0wNi0wMSAxMzoxMDoyNy4yODA4NDQ' -F notes='`git log -n 1 --pretty=format:'%H'`-<%= grunt.option('notes') %>' -F notify=True -F distribution_lists='core'",
+					"curl http://testflightapp.com/api/builds.json -F file=@builds/ios/Colors.ipa -F api_token='7a851de2182ced682c31e5f6242ccaac_MTg4NTc3NDIwMTQtMDYtMDEgMTM6MDM6MjEuNjc2NTAy' -F team_token='d43daeca16bc212676bc17d8f47f2164_Mzg3NzkwMjAxNC0wNi0wMSAxMzoxMDoyNy4yODA4NDQ' -F notes='<%= grunt.option('notes') %>' -F notify=True -F distribution_lists='core'",
 				options: {
 					failOnError: true,
 					stdout: true,
