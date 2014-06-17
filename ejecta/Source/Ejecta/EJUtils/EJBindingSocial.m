@@ -31,8 +31,8 @@
             }
         }else{
             // set the screen size, adjust for over scaled image
-            NSInteger width = (gameWidth*2);
-            NSInteger height = (gameHeight*2);
+            NSInteger width = (gameWidth*[UIScreen mainScreen].scale);
+            NSInteger height = (gameHeight*[UIScreen mainScreen].scale);
             
             NSInteger myDataLength = width * height * 4;
             
