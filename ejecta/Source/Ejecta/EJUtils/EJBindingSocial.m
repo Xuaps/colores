@@ -104,7 +104,12 @@ EJ_BIND_FUNCTION(post, ctx, argc, argv)
     
     return JSValueMakeBoolean(ctx, true);
 }
-
+EJ_BIND_GET( isSupported, ctx ) {
+    if(NSClassFromString(@"SLComposeViewController") != nil) {
+        return JSValueMakeBoolean(ctx, true);
+    }
+    return JSValueMakeBoolean(ctx, false);
+}
 EJ_BIND_GET( gameHeight, ctx ) {
     return JSValueMakeNumber( ctx, gameHeight );
 }
