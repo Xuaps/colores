@@ -223,6 +223,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
 	grunt.registerTask('release', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa", "shell:rollbar"]);
+	grunt.registerTask('publish', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp']); 
 	// Dev tasks
 	grunt.registerTask('doc', ['jshint', 'jsduck']);
 	grunt.registerTask('lint', ['jshint']);
