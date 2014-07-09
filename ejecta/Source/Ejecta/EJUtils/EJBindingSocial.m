@@ -62,6 +62,8 @@
 
             CGImageRef imageRef = CGImageCreate(width, height, bitsPerComponent, bitsPerPixel, bytesPerRow, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
             [sns addImage:[UIImage imageWithCGImage:imageRef]];
+            free(buffer);
+            free(buffer2);
         }
         if (url) {
             [sns addURL:[[NSURL alloc] initWithString:url]];
@@ -82,6 +84,7 @@
                     break;
             }
             [sns dismissViewControllerAnimated:YES completion:nil];
+            
         }];
         
         //      [scriptView.window.rootViewController presentModalViewController:sns animated:YES];
