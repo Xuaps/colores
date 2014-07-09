@@ -129,6 +129,14 @@ module.exports = function(grunt) {
 					to: ''
 				}],
 			},
+			environment: {
+				src: ['builds/tmp/lib/plugins/rollbar.js'],
+				dest: 'builds/tmp/lib/plugins/rollbar.js',
+				replacements: [{
+					from: '\"develop\"',
+					to: '\"production\"'
+				}],
+			},
 			ej_impact_debug: {
 				src: ['ejecta/App/lib/game/main.js'],
 				dest: 'ejecta/App/lib/game/main.js',
@@ -210,7 +218,7 @@ module.exports = function(grunt) {
 
 	// Helper tasks, not intended to be run alone
 	grunt.registerTask('build-tmp', ['clean:builds', 'mkdir:tmp', 'copy:tmp', 'replace:build_info', 'replace:impact_links']);
-	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:debug_info', 'shell:game', 'clean:lib', 'uglify:game']);
+	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:debug_info', 'replace:environment', 'shell:game', 'clean:lib', 'uglify:game']);
 	grunt.registerTask('build-platforms', ['copy:web']);
 	grunt.registerTask('build-debug-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_debug','replace:ej_impact_debug']);
 	grunt.registerTask('build-release-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_release']);
