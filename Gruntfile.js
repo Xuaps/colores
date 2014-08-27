@@ -103,6 +103,7 @@ module.exports = function(grunt) {
 		clean: {
 			builds: ['builds/web/**/*'],
 			ejecta: ['ejecta/App/**/*'],
+			cordova: ['cordova/www/**/*'],
 			lib: ['builds/tmp/lib'],
 			tmp: ['builds/tmp']
 		},
@@ -182,6 +183,11 @@ module.exports = function(grunt) {
 				files: [
 					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html'], dest: 'ejecta/App/', dot: true }
 				]
+			},
+			cordova: {
+				files: [
+					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html'], dest: 'cordova/www/', dot: true }
+				]
 			}
 		},
 		jsduck: {
@@ -221,6 +227,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:debug_info', 'replace:environment', 'shell:game', 'clean:lib', 'uglify:game']);
 	grunt.registerTask('build-platforms', ['copy:web']);
 	grunt.registerTask('build-debug-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_debug','replace:ej_impact_debug']);
+	grunt.registerTask('build-debug-cordova', ['clean:cordova','copy:cordova']);//, 'file-creator:ejecta_debug','replace:ej_impact_debug']);
 	grunt.registerTask('build-release-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_release']);
 	grunt.registerTask('set-vars' , function(){
 		grunt.option('notes',grunt.option('notes') || 'This build was uploaded via the upload API');
@@ -229,7 +236,7 @@ module.exports = function(grunt) {
 	//grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'clean:tmp']);
 	//grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
 
-	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','clean:tmp']);
+	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','build-debug-cordova','clean:tmp']);
 	grunt.registerTask('release', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa", "shell:rollbar"]);
 	grunt.registerTask('publish', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp']); 
 	// Dev tasks
