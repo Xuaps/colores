@@ -74,15 +74,6 @@ module.exports = function(grunt) {
 				},
 				
 			},
-			rollbar: {
-				command: 
-					'curl https://api.rollbar.com/api/1/deploy/ -F access_token=48c6534afdaa431a8eb851281afe2ea2 -F environment=production -F revision=`git log -n 1 --pretty=format:"%H"` -F local_username=`whoami`',
-				options: {
-					failOnError: true,
-					stdout: true,
-					stderr: true,
-				}
-			},
 			upload_ipa: {
 				command: 
 					"curl http://testflightapp.com/api/builds.json -F file=@builds/ios/Colors.ipa -F api_token='7a851de2182ced682c31e5f6242ccaac_MTg4NTc3NDIwMTQtMDYtMDEgMTM6MDM6MjEuNjc2NTAy' -F team_token='d43daeca16bc212676bc17d8f47f2164_Mzg3NzkwMjAxNC0wNi0wMSAxMzoxMDoyNy4yODA4NDQ' -F notes='<%= grunt.option('notes') %>' -F notify=True -F distribution_lists='core'",
@@ -128,14 +119,6 @@ module.exports = function(grunt) {
 				replacements: [{
 					from: '\'impact.debug.debug\',',
 					to: ''
-				}],
-			},
-			environment: {
-				src: ['builds/tmp/lib/plugins/rollbar.js'],
-				dest: 'builds/tmp/lib/plugins/rollbar.js',
-				replacements: [{
-					from: '\"develop\"',
-					to: '\"production\"'
 				}],
 			},
 			ej_impact_debug: {
@@ -224,7 +207,7 @@ module.exports = function(grunt) {
 
 	// Helper tasks, not intended to be run alone
 	grunt.registerTask('build-tmp', ['clean:builds', 'mkdir:tmp', 'copy:tmp', 'replace:build_info', 'replace:impact_links']);
-	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:debug_info', 'replace:environment', 'shell:game', 'clean:lib', 'uglify:game']);
+	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:debug_info', 'shell:game', 'clean:lib', 'uglify:game']);
 	grunt.registerTask('build-platforms', ['copy:web']);
 	grunt.registerTask('build-debug-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_debug','replace:ej_impact_debug']);
 	grunt.registerTask('build-debug-cordova', ['clean:cordova','copy:cordova']);//, 'file-creator:ejecta_debug','replace:ej_impact_debug']);
@@ -237,7 +220,7 @@ module.exports = function(grunt) {
 	//grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
 
 	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','build-debug-cordova','clean:tmp']);
-	grunt.registerTask('release', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa", "shell:rollbar"]);
+	grunt.registerTask('release', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa"]);
 	grunt.registerTask('publish', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp']); 
 	// Dev tasks
 	grunt.registerTask('doc', ['jshint', 'jsduck']);
