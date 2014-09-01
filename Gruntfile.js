@@ -13,7 +13,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jsduck');
 	grunt.loadNpmTasks('grunt-karma');
 	grunt.loadNpmTasks('grunt-exec');
-	grunt.loadNpmTasks('grunt-file-creator');
 
 	var pkg = grunt.file.readJSON('package.json');
 	grunt.initConfig({
@@ -45,74 +44,16 @@ module.exports = function(grunt) {
 					stdout: true
 				}
 			},
-			build: {
-				command: 
-					'xcodebuild -configuration Debug -sdk iphonesimulator7.1 -project ejecta/Colors.xcodeproj -arch i386 clean build',
-				options: {
-					stdout: true
-				}
-			},
-			emulate: {
-				command: 
-					'ios-sim launch ejecta/build/Debug-iphonesimulator/Colors.app --family ipad --stderr stderr.log --stdout stderr.log --exit'
-				,
-				options: {
-					failOnError: true,
-					stdout: true
-				}
-			},
-			generate_ipa: {
-				command: 
-					'cd ejecta && xcodebuild -scheme Colors archive && cd ..'
-				,
-				options: {
-					failOnError: true,
-					stdout: false,
-					execOptions: {
-				      maxBuffer: 1000*1024
-				    },
-				},
-				
-			},
-			upload_ipa: {
-				command: 
-					"curl http://testflightapp.com/api/builds.json -F file=@builds/ios/Colors.ipa -F api_token='7a851de2182ced682c31e5f6242ccaac_MTg4NTc3NDIwMTQtMDYtMDEgMTM6MDM6MjEuNjc2NTAy' -F team_token='d43daeca16bc212676bc17d8f47f2164_Mzg3NzkwMjAxNC0wNi0wMSAxMzoxMDoyNy4yODA4NDQ' -F notes='<%= grunt.option('notes') %>' -F notify=True -F distribution_lists='core'",
-				options: {
-					failOnError: true,
-					stdout: true,
-					stderr: true,
-					execOptions: {
-				      maxBuffer: 1000*1024
-				    },
-				}
-			},
-
 		},
 		mkdir: {
 			tmp: { options: { create: ['builds/tmp', 'builds/tmp/js'] } }
 		},
 		clean: {
-			builds: ['builds/web/**/*'],
-			ejecta: ['ejecta/App/**/*'],
-			cordova: ['cordova/www/**/*'],
+			builds: ['builds/web/**/*', 'ejecta/App/**/*', 'cordova/www/**/*', '!builds/web/index.html', '!cordova/www/index.html', '!cordova/www/FastCanvas.js', '!ejecta/App/index.js'],
 			lib: ['builds/tmp/lib'],
 			tmp: ['builds/tmp']
 		},
 		replace: {
-			game_path: {
-				src: ['builds/tmp/index.html'],
-				dest: 'builds/tmp/index.html',
-				replacements: [{
-					from: 'lib/game/main.js',
-					to: 'js/game.min.js'
-				}, {
-					from: '<script type="text/javascript" src="lib/impact/impact.js"></script>',
-					to: ''
-				}, {
-					from: '<script src="lib/game/globals.js"></script>',
-					to: ''
-				}],
-			},
 			debug_info: {
 				src: ['builds/tmp/lib/game/main.js'],
 				dest: 'builds/tmp/lib/game/main.js',
@@ -121,34 +62,14 @@ module.exports = function(grunt) {
 					to: ''
 				}],
 			},
-			ej_impact_debug: {
-				src: ['ejecta/App/lib/game/main.js'],
-				dest: 'ejecta/App/lib/game/main.js',
+			canvas_name: {
+				src: ['cordova/www/js/game.min.js'],
+				dest: 'cordova/www/js/game.min.js',
 				replacements: [{
-					from: '\'impact.debug.debug\',',
-					to: '\'plugins.debug\','
+					from: '\"#canvas\"',
+					to: '\"#fastCanvas\"'
 				}],
 			},
-			build_info: {
-				src: ['builds/tmp/index.html'],
-				dest: 'builds/tmp/index.html',
-				replacements: [{
-					from: '<!-- BUILD INFO -->',
-					to: function() {
-						// Take a fresh copy in case the version has been bumped
-						var pkg = grunt.file.readJSON('package.json');
-						return '<p class="build-info"><%= pkg.name %> (' + pkg.version + ')<br><%= grunt.template.today("UTC:dddd, dd/mm/yyyy") %><br><%= grunt.template.today("UTC:HH:MM:ss Z") %></p>';
-					}
-				}],
-			},
-			impact_links: {
-				src: ['builds/tmp/index.html'],
-				dest: 'builds/tmp/index.html',
-				replacements: [{
-					from: /^.*IMPACT LINKS START[\s\S]*?IMPACT LINKS END.*$/gm,
-					to: ''
-				}],
-			}
 		},
 		copy: {
 			tmp: {
@@ -159,17 +80,17 @@ module.exports = function(grunt) {
 			},
 			web: {
 				files: [
-					{ expand: true, cwd: 'builds/tmp', src: ['**'], dest: 'builds/web/', dot: true }
+					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html', '!media/*@2x.*', '!media/*.caf', '!media/**/*.caf'], dest: 'builds/web/', dot: true }
 				]
 			},
 			ejecta: {
 				files: [
-					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html'], dest: 'ejecta/App/', dot: true }
+					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html', '!media/*.ogg', '!media/**/*.ogg'], dest: 'ejecta/App/', dot: true }
 				]
 			},
 			cordova: {
 				files: [
-					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html'], dest: 'cordova/www/', dot: true }
+					{ expand: true, cwd: 'builds/tmp', src: ['**', '!index.html', '!media/*@2x.*', '!media/*.caf', '!media/**/*.caf'], dest: 'cordova/www/', dot: true }
 				]
 			}
 		},
@@ -188,44 +109,17 @@ module.exports = function(grunt) {
 		jshint: {
 			options: { trailing: true },
 			target: { src: ['lib/game/**/*.js'] }
-		},
-		'file-creator': {
-		    "ejecta_debug": {
-		      "ejecta/App/index.js": function(fs, fd, done) {
-		        fs.writeSync(fd, "ejecta.include('lib/impact/impact.js');\nejecta.include('lib/game/main.js');");
-		        done();
-		      }
-		    },
-		    "ejecta_release": {
-		      "ejecta/App/index.js": function(fs, fd, done) {
-		        fs.writeSync(fd, "ejecta.include('js/game.min.js');");
-		        done();
-		      }
-		    }
-		  }
+		}
 	});
 
 	// Helper tasks, not intended to be run alone
-	grunt.registerTask('build-tmp', ['clean:builds', 'mkdir:tmp', 'copy:tmp', 'replace:build_info', 'replace:impact_links']);
-	grunt.registerTask('bake-tmp', ['build-tmp', 'replace:game_path', 'replace:debug_info', 'shell:game', 'clean:lib', 'uglify:game']);
-	grunt.registerTask('build-platforms', ['copy:web']);
-	grunt.registerTask('build-debug-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_debug','replace:ej_impact_debug']);
-	grunt.registerTask('build-debug-cordova', ['clean:cordova','copy:cordova']);//, 'file-creator:ejecta_debug','replace:ej_impact_debug']);
-	grunt.registerTask('build-release-ejecta', ['clean:ejecta','copy:ejecta', 'file-creator:ejecta_release']);
-	grunt.registerTask('set-vars' , function(){
-		grunt.option('notes',grunt.option('notes') || 'This build was uploaded via the upload API');
-	});
-	// Build types
-	//grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'clean:tmp']);
-	//grunt.registerTask('release', ['jshint', 'bake-tmp', 'build-platforms', 'clean:tmp']);
+	grunt.registerTask('build-tmp', ['clean:builds', 'clean:tmp', 'mkdir:tmp', 'copy:tmp']);
+	grunt.registerTask('commons-changes', ['replace:debug_info', 'shell:game', 'clean:lib', 'uglify:game'])
+	grunt.registerTask('build-cordova', ['copy:cordova', 'replace:canvas_name']);
 
-	grunt.registerTask('debug', ['jshint', 'build-tmp', 'build-platforms', 'build-debug-ejecta','build-debug-cordova','clean:tmp']);
-	grunt.registerTask('release', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp', "shell:generate_ipa", "shell:upload_ipa"]);
-	grunt.registerTask('publish', ['set-vars','jshint', 'bake-tmp', 'build-platforms', 'build-release-ejecta','clean:tmp']); 
-	// Dev tasks
+	grunt.registerTask('build', ['jshint', 'build-tmp', 'commons-changes', 'copy:web', 'copy:ejecta', 'build-cordova']);
 	grunt.registerTask('doc', ['jshint', 'jsduck']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('clean-builds', ['clean:builds']);
 	grunt.registerTask('test', ['debug', 'karma:unit', 'clean:tmp']);
-	//grunt.registerTask('emulate_ios', ['ejecta-debug',  'shell:build', 'shell:emulate'])
 };
