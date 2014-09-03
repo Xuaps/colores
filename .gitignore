@@ -1,12 +1,11 @@
 builds/
 
+ejecta-x/
 ejecta/build/
-ejecta/App/
 xcuserdata/
 
 cordova/platforms/
-cordova/www/
-cordova/plugins/
+
 
 node_modules/
 

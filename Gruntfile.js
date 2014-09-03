@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 					from: '\"#canvas\"',
 					to: '\"#fastCanvas\"'
 				}],
-			},
+			}
 		},
 		copy: {
 			tmp: {

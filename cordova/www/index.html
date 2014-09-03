@@ -21,8 +21,18 @@
 </body>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8" src="FastCanvas.js"></script>
+<script type="text/javascript" src=""></script>
+
 <script type="text/javascript">
-	FastCanvas.create();
+	document.addEventListener("deviceready", function(){
+		FastCanvas.create();
+
+		var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+	  //set the source of the script element
+	  script.src = 'js/game.min.js';
+    //add the script element to the DOM
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+	}, false);
+
 </script>
-<script type="text/javascript" src="js/game.min.js"></script>
 </html>
