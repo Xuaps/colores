@@ -1,6 +1,7 @@
 
 #import "AppDelegate.h"
 #import "EJJavaScriptView.h"
+#import <SplunkMint-iOS/SplunkMint-iOS.h>
 @implementation AppDelegate
 @synthesize window;
 
@@ -9,6 +10,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [[Mint sharedInstance] initAndStartSession:@"b7be1320"];
 	// Optionally set the idle timer disabled, this prevents the device from sleep when
 	// not being interacted with by touch. ie. games with motion control.
 	application.idleTimerDisabled = YES;
