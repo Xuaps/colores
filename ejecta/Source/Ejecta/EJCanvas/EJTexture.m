@@ -6,6 +6,8 @@
 #import "EJSharedTextureCache.h"
 #import "EJJavaScriptView.h"
 #import "NSString+Hashes.h"
+#import <sys/types.h>
+#import <sys/sysctl.h>
 
 #define PVR_TEXTURE_FLAG_TYPE_MASK 0xff
 
@@ -402,9 +404,13 @@ typedef struct {
 - (NSMutableData *)loadPixelsFromPath:(NSString *)path {
 	BOOL isURL = [path hasPrefix:@"http:"] || [path hasPrefix:@"https:"];
 	BOOL isDataURI = !isURL && [path hasPrefix:@"data:"];
+    char machine[32];
+    size_t size = sizeof(machine);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSArray *invalid2xDevices = [NSArray arrayWithObjects:@"iPhone3,1",@"iPhone3,2",@"iPhone3,3", nil];
 	
-	// Try @2x texture?
-	if( !isURL && !isDataURI && [UIScreen mainScreen].scale == 2 ) {
+    // Try @2x texture?
+	if( !isURL && !isDataURI && [UIScreen mainScreen].scale == 2 && ![invalid2xDevices containsObject:[NSString stringWithUTF8String:machine]]) {
 		NSString *path2x = [[[path stringByDeletingPathExtension]
 			stringByAppendingString:@"@2x"]
 			stringByAppendingPathExtension:[path pathExtension]];
