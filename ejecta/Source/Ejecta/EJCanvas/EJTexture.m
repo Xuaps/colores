@@ -9,6 +9,8 @@
 #import <sys/types.h>
 #import <sys/sysctl.h>
 
+#import <SplunkMint-iOS/SplunkMint-iOS.h>
+
 #define PVR_TEXTURE_FLAG_TYPE_MASK 0xff
 
 enum {
@@ -285,7 +287,20 @@ typedef struct {
 	GLint maxTextureSize;
 	glGetIntegerv(GL_MAX_TEXTURE_SIZE, &maxTextureSize);
 	
+    
 	if( width > maxTextureSize || height > maxTextureSize ) {
+        NSString *exception = [NSString stringWithFormat:@"MAX_TEXTURE_SIZE (%@)",
+                               fullPath ? fullPath : @"[Dynamic]"];
+        
+        @try{
+            @throw [NSException
+                    exceptionWithName: exception
+                    reason:exception
+                    userInfo:nil];
+        }@catch (NSException *ex){
+            MintLogException(ex, nil);
+        }
+
 		NSLog(@"Warning: Image %@ larger than MAX_TEXTURE_SIZE (%d)", fullPath ? fullPath : @"[Dynamic]", maxTextureSize);
 		return;
 	}

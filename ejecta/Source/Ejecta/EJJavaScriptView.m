@@ -4,6 +4,7 @@
 #import "EJClassLoader.h"
 #import <objc/runtime.h>
 #import <SplunkMint-iOS/SplunkMint-iOS.h>
+#include <stdlib.h>
 
 
 // Block function callbacks
@@ -299,17 +300,17 @@ void EJBlockFunctionFinalize(JSObjectRef object) {
                                JSValueToNSString( ctxp, line ),
                                JSValueToNSString( ctxp, file )];
     
-    NSException *e = [NSException
-                      exceptionWithName:@"Javascript exception"
-                      reason:reason
-                      userInfo:nil];
-    
-	MintLogException(e, nil);
+    @try{
+        @throw [NSException
+                exceptionWithName: [NSString stringWithFormat:@"Javascript exception %u", arc4random_uniform(10000)]
+                reason:reason
+                userInfo:nil];
+    }@catch (NSException *ex){
+        MintLogException(ex, nil);
+    }
+	
 	NSLog(
-		@"%@ at line %@ in %@",
-		JSValueToNSString( ctxp, exception ),
-		JSValueToNSString( ctxp, line ),
-		JSValueToNSString( ctxp, file )
+		@"%@", reason
 	);
 	
 	JSStringRelease( jsLinePropertyName );
