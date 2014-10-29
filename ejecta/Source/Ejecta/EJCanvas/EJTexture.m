@@ -421,7 +421,6 @@ typedef struct {
 		}
 	}
 	
-	
 	NSMutableData *pixels;
 	if( isDataURI || isURL ) {
 		// Load directly from a Data URI string or an URL

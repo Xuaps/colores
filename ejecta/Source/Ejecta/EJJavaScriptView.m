@@ -3,6 +3,7 @@
 #import "EJBindingBase.h"
 #import "EJClassLoader.h"
 #import <objc/runtime.h>
+#import <SplunkMint-iOS/SplunkMint-iOS.h>
 
 
 // Block function callbacks
@@ -292,7 +293,18 @@ void EJBlockFunctionFinalize(JSObjectRef object) {
 	JSObjectRef exObject = JSValueToObject( ctxp, exception, NULL );
 	JSValueRef line = JSObjectGetProperty( ctxp, exObject, jsLinePropertyName, NULL );
 	JSValueRef file = JSObjectGetProperty( ctxp, exObject, jsFilePropertyName, NULL );
-	
+    
+    NSString *reason = [NSString stringWithFormat:@"%@ at line %@ in %@",
+                               JSValueToNSString( ctxp, exception ),
+                               JSValueToNSString( ctxp, line ),
+                               JSValueToNSString( ctxp, file )];
+    
+    NSException *e = [NSException
+                      exceptionWithName:@"Javascript exception"
+                      reason:reason
+                      userInfo:nil];
+    
+	MintLogException(e, nil);
 	NSLog(
 		@"%@ at line %@ in %@",
 		JSValueToNSString( ctxp, exception ),
