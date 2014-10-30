@@ -124,7 +124,13 @@
 		E33573EB194056C6003E0131 /* EJBindingSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = E33573EA194056C6003E0131 /* EJBindingSocial.m */; };
 		E33573ED194057E8003E0131 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33573EC194057E8003E0131 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E354461E19347776007AB365 /* GARABD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = E354461D19347776007AB365 /* GARABD.TTF */; };
+		E356E16F1A02316100A0DB36 /* SplunkMint-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E356E16E1A02316100A0DB36 /* SplunkMint-iOS.framework */; };
+		E398A16619FFE39000426128 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E398A16519FFE39000426128 /* CoreTelephony.framework */; };
+		E398A16819FFE3A400426128 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E398A16719FFE3A400426128 /* libz.dylib */; };
 		E3B48E50197ACA5000B89AC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3B48E52197ACA5000B89AC3 /* InfoPlist.strings */; };
+		E3F9AA8A19AB5FFD003F3B4C /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E3F9AA8719AB5FFD003F3B4C /* Default~iphone.png */; };
+		E3F9AA8B19AB5FFD003F3B4C /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = E3F9AA8819AB5FFD003F3B4C /* Default@2x~iphone.png */; };
+		E3F9AA8C19AB5FFD003F3B4C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3F9AA8919AB5FFD003F3B4C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -321,8 +327,15 @@
 		E33573EA194056C6003E0131 /* EJBindingSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJBindingSocial.m; sourceTree = "<group>"; };
 		E33573EC194057E8003E0131 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E354461D19347776007AB365 /* GARABD.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GARABD.TTF; sourceTree = "<group>"; };
+		E356E16E1A02316100A0DB36 /* SplunkMint-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SplunkMint-iOS.framework"; path = "Source/lib/SplunkMint-iOS.framework"; sourceTree = "<group>"; };
+		E398A16319FFE35600426128 /* SplunkMint-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SplunkMint-iOS.framework"; path = "../../../Downloads/SplunkMint-iOS.framework"; sourceTree = "<group>"; };
+		E398A16519FFE39000426128 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E398A16719FFE3A400426128 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E3B48E53197ACA7800B89AC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E3B48E54197ACAB900B89AC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E3F9AA8719AB5FFD003F3B4C /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		E3F9AA8819AB5FFD003F3B4C /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~iphone.png"; sourceTree = "<group>"; };
+		E3F9AA8919AB5FFD003F3B4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +343,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E356E16F1A02316100A0DB36 /* SplunkMint-iOS.framework in Frameworks */,
+				E398A16819FFE3A400426128 /* libz.dylib in Frameworks */,
+				E398A16619FFE39000426128 /* CoreTelephony.framework in Frameworks */,
+				B6F463A41636C3FB00FC89C1 /* SystemConfiguration.framework in Frameworks */,
 				E33573ED194057E8003E0131 /* Social.framework in Frameworks */,
 				33BE9DE41868183900E0D16E /* MobileCoreServices.framework in Frameworks */,
 				B6D4B283183CF43A008251EB /* CoreLocation.framework in Frameworks */,
@@ -339,7 +356,6 @@
 				B63D256A16E8DF33007E6034 /* Security.framework in Frameworks */,
 				B63D256816E8DF23007E6034 /* CFNetwork.framework in Frameworks */,
 				B6F1151C1677FCF5001F1324 /* CoreMotion.framework in Frameworks */,
-				B6F463A41636C3FB00FC89C1 /* SystemConfiguration.framework in Frameworks */,
 				5B7B76761619DB9700691910 /* CoreText.framework in Frameworks */,
 				B6074FF315F8E41700D987F9 /* GameKit.framework in Frameworks */,
 				B66F1E811476B6B90090D208 /* libicucore.dylib in Frameworks */,
@@ -382,6 +398,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E356E16E1A02316100A0DB36 /* SplunkMint-iOS.framework */,
+				E398A16719FFE3A400426128 /* libz.dylib */,
+				E398A16519FFE39000426128 /* CoreTelephony.framework */,
+				E398A16319FFE35600426128 /* SplunkMint-iOS.framework */,
 				E33573EC194057E8003E0131 /* Social.framework */,
 				33BE9DE31868183900E0D16E /* MobileCoreServices.framework */,
 				B6D4B282183CF43A008251EB /* CoreLocation.framework */,
@@ -571,6 +591,9 @@
 		B64CE683166682B10087CF94 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E3F9AA8719AB5FFD003F3B4C /* Default~iphone.png */,
+				E3F9AA8819AB5FFD003F3B4C /* Default@2x~iphone.png */,
+				E3F9AA8919AB5FFD003F3B4C /* Default-568h@2x.png */,
 				E3051571194FA5F300BD405B /* Default.png */,
 				E3051572194FA5F300BD405B /* Default@2x.png */,
 				E354461D19347776007AB365 /* GARABD.TTF */,
@@ -740,6 +763,9 @@
 				E31E34DE192A2F7800455D3F /* icon-small.png in Resources */,
 				E31E34DF192A2F7800455D3F /* icon-small@2x.png in Resources */,
 				B64C878E16B800DA0097CD5B /* Vertex.vsh in Resources */,
+				E3F9AA8B19AB5FFD003F3B4C /* Default@2x~iphone.png in Resources */,
+				E3F9AA8C19AB5FFD003F3B4C /* Default-568h@2x.png in Resources */,
+				E3F9AA8A19AB5FFD003F3B4C /* Default~iphone.png in Resources */,
 				B609F2D416AD877E00A3B2B9 /* RadialGradient.fsh in Resources */,
 				E31E34DD192A2F7800455D3F /* icon-50@2x.png in Resources */,
 				B68C5B95132E6CD60015092E /* App in Resources */,
@@ -882,6 +908,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Source/lib\"",
+					/Users/dvilchez/Downloads,
+					"$(PROJECT_DIR)/Source/lib",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -896,9 +924,13 @@
 					"\"$(SRCROOT)/Source/lib\"",
 				);
 				OTHER_CFLAGS = "-DDEBUG";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = Colors;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				"VALID_ARCHS[sdk=*]" = "armv7 armv7s arm64 i386";
 			};
 			name = Debug;
@@ -914,6 +946,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Source/lib\"",
+					/Users/dvilchez/Downloads,
+					"$(PROJECT_DIR)/Source/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -924,9 +958,13 @@
 					"\"$(SRCROOT)\"",
 					"\"$(SRCROOT)/Source/lib\"",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = Colors;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

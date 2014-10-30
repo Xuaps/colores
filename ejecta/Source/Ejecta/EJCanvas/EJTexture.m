@@ -402,8 +402,8 @@ typedef struct {
 - (NSMutableData *)loadPixelsFromPath:(NSString *)path {
 	BOOL isURL = [path hasPrefix:@"http:"] || [path hasPrefix:@"https:"];
 	BOOL isDataURI = !isURL && [path hasPrefix:@"data:"];
-	
-	// Try @2x texture?
+    
+    // Try @2x texture?
 	if( !isURL && !isDataURI && [UIScreen mainScreen].scale == 2 ) {
 		NSString *path2x = [[[path stringByDeletingPathExtension]
 			stringByAppendingString:@"@2x"]
@@ -414,7 +414,6 @@ typedef struct {
 			path = path2x;
 		}
 	}
-	
 	
 	NSMutableData *pixels;
 	if( isDataURI || isURL ) {

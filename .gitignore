@@ -1,9 +1,16 @@
 builds/
+
+ejecta-x/
 ejecta/build/
-ejecta/App/
 xcuserdata/
+
+cordova/platforms/
+
 
 node_modules/
 
 
 stderr.log
+
+#vim
+*.swp
