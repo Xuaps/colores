@@ -6,10 +6,6 @@
 #import "EJSharedTextureCache.h"
 #import "EJJavaScriptView.h"
 #import "NSString+Hashes.h"
-#import <sys/types.h>
-#import <sys/sysctl.h>
-
-#import <SplunkMint-iOS/SplunkMint-iOS.h>
 
 #define PVR_TEXTURE_FLAG_TYPE_MASK 0xff
 
@@ -287,20 +283,7 @@ typedef struct {
 	GLint maxTextureSize;
 	glGetIntegerv(GL_MAX_TEXTURE_SIZE, &maxTextureSize);
 	
-    
 	if( width > maxTextureSize || height > maxTextureSize ) {
-        NSString *exception = [NSString stringWithFormat:@"MAX_TEXTURE_SIZE (%@)",
-                               fullPath ? fullPath : @"[Dynamic]"];
-        
-        @try{
-            @throw [NSException
-                    exceptionWithName: exception
-                    reason:exception
-                    userInfo:nil];
-        }@catch (NSException *ex){
-            MintLogException(ex, nil);
-        }
-
 		NSLog(@"Warning: Image %@ larger than MAX_TEXTURE_SIZE (%d)", fullPath ? fullPath : @"[Dynamic]", maxTextureSize);
 		return;
 	}
@@ -419,13 +402,9 @@ typedef struct {
 - (NSMutableData *)loadPixelsFromPath:(NSString *)path {
 	BOOL isURL = [path hasPrefix:@"http:"] || [path hasPrefix:@"https:"];
 	BOOL isDataURI = !isURL && [path hasPrefix:@"data:"];
-    char machine[32];
-    size_t size = sizeof(machine);
-    sysctlbyname("hw.machine", machine, &size, NULL, 0);
-    NSArray *invalid2xDevices = [NSArray arrayWithObjects:@"iPhone3,1",@"iPhone3,2",@"iPhone3,3", nil];
-	
+    
     // Try @2x texture?
-	if( !isURL && !isDataURI && [UIScreen mainScreen].scale == 2 && ![invalid2xDevices containsObject:[NSString stringWithUTF8String:machine]]) {
+	if( !isURL && !isDataURI && [UIScreen mainScreen].scale == 2 ) {
 		NSString *path2x = [[[path stringByDeletingPathExtension]
 			stringByAppendingString:@"@2x"]
 			stringByAppendingPathExtension:[path pathExtension]];
