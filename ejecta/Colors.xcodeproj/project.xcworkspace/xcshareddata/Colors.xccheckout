@@ -10,29 +10,41 @@
 	<string>Colors</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8C373255-91F4-4143-8B57-C3E926F1C8AA</key>
-		<string>ssh://bitbucket.org/dvilchezm/colores.git</string>
+		<key>7E5EC084E6BCF345279B6E78F9BC7DC9E88CF117</key>
+		<string>bitbucket.org:dvilchezm/colores.git</string>
+		<key>a928ce94-2f20-0410-a1df-a308b09f73f9</key>
+		<string>http://www.cv.dvilchez.net</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ejecta/Colors.xcodeproj/project.xcworkspace</string>
+	<string>ejecta/Colors.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8C373255-91F4-4143-8B57-C3E926F1C8AA</key>
+		<key>7E5EC084E6BCF345279B6E78F9BC7DC9E88CF117</key>
 		<string>../../..</string>
+		<key>a928ce94-2f20-0410-a1df-a308b09f73f9</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/dvilchezm/colores.git</string>
+	<string>bitbucket.org:dvilchezm/colores.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8C373255-91F4-4143-8B57-C3E926F1C8AA</string>
+	<string>7E5EC084E6BCF345279B6E78F9BC7DC9E88CF117</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>a928ce94-2f20-0410-a1df-a308b09f73f9</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8C373255-91F4-4143-8B57-C3E926F1C8AA</string>
+			<string>7E5EC084E6BCF345279B6E78F9BC7DC9E88CF117</string>
 			<key>IDESourceControlWCCName</key>
 			<string>colores</string>
 		</dict>
