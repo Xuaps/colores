@@ -29,11 +29,16 @@
   <script>
 	// Handler for when app goes to background
 	function onAppPause() {
+		// Pause background music
 		if (ig.music && ig.music.currentTrack) {
-			// Store the current playback state
 			ig.system.pausedMusic = true;
-			// Pause the music
 			ig.music.pause();
+		}
+		
+		// Pause any active narration
+		if (ig.game && ig.game.narration) {
+			ig.system.pausedNarration = true;
+			ig.game.narration.stop();
 		}
 	}
 
@@ -41,10 +46,19 @@
 	function onAppResume() {
 		// Wait a moment before resuming audio (to ensure app is fully active)
 		setTimeout(function() {
+			// Resume background music if it was playing before
 			if (ig.music && ig.system.pausedMusic && ig.settings.music) {
-				// Only resume if music was playing before and is still enabled in settings
 				ig.music.play();
 				ig.system.pausedMusic = false;
+			}
+			
+			// Resume narration if it was playing before (we can't resume from where it left off,
+			// so we simply set a flag to indicate it was interrupted)
+			if (ig.game && ig.system.pausedNarration) {
+				ig.system.pausedNarration = false;
+				// We can't directly resume narration as it would start from the beginning
+				// Instead, mark it as interrupted so the game knows it was playing
+				ig.system.narrationInterrupted = true;
 			}
 		}, 300);
 	}
@@ -53,16 +67,10 @@
 	function onVisibilityChange() {
 		if (document.hidden) {
 			// Page is hidden (user switched tabs or minimized browser)
-			if (ig.music && ig.music.currentTrack) {
-				ig.system.pausedMusic = true;
-				ig.music.pause();
-			}
+			onAppPause();
 		} else {
 			// Page is visible again
-			if (ig.music && ig.system.pausedMusic && ig.settings.music) {
-				ig.music.play();
-				ig.system.pausedMusic = false;
-			}
+			onAppResume();
 		}
 	}
 
