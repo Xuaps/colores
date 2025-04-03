@@ -27,6 +27,45 @@
 <body>
   <canvas id="canvas"></canvas>
   <script>
+	// Handler for when app goes to background
+	function onAppPause() {
+		if (ig.music && ig.music.currentTrack) {
+			// Store the current playback state
+			ig.system.pausedMusic = true;
+			// Pause the music
+			ig.music.pause();
+		}
+	}
+
+	// Handler for when app returns to foreground
+	function onAppResume() {
+		// Wait a moment before resuming audio (to ensure app is fully active)
+		setTimeout(function() {
+			if (ig.music && ig.system.pausedMusic && ig.settings.music) {
+				// Only resume if music was playing before and is still enabled in settings
+				ig.music.play();
+				ig.system.pausedMusic = false;
+			}
+		}, 300);
+	}
+
+	// Handler for browser tab visibility changes
+	function onVisibilityChange() {
+		if (document.hidden) {
+			// Page is hidden (user switched tabs or minimized browser)
+			if (ig.music && ig.music.currentTrack) {
+				ig.system.pausedMusic = true;
+				ig.music.pause();
+			}
+		} else {
+			// Page is visible again
+			if (ig.music && ig.system.pausedMusic && ig.settings.music) {
+				ig.music.play();
+				ig.system.pausedMusic = false;
+			}
+		}
+	}
+
   var content = document.getElementById('canvas');
   content.addEventListener('touchstart', function(event) {
       this.allowUp = (this.scrollTop > 0);
@@ -45,6 +84,10 @@
           event.preventDefault();
       }
   });
+
+  document.addEventListener("pause", onAppPause, false);
+  document.addEventListener("resume", onAppResume, false);
+  document.addEventListener('visibilitychange', onVisibilityChange, false);
   </script>
 </body>
 </html>
